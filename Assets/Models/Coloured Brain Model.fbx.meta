@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: c0423cc6f0ecb6644b25f373b37edfe8
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: brain stem
+    100002: Brain_root
+    100004: Camera
+    100006: Cerebellum
+    100008: Cerebral cortex left
+    100010: Cerebral cortex right
+    100012: //RootNode
+    100014: default
+    100016: default.005
+    100018: default.008
+    100020: Frontal Lobe left
+    100022: Frontal Lobe right
+    100024: Lamp
+    100026: Occipital lobe left
+    100028: Occipital lobe right
+    100030: Temporal Lobe left
+    100032: Temporal Lobe right
+    400000: brain stem
+    400002: Brain_root
+    400004: Camera
+    400006: Cerebellum
+    400008: Cerebral cortex left
+    400010: Cerebral cortex right
+    400012: //RootNode
+    400014: default
+    400016: default.005
+    400018: default.008
+    400020: Frontal Lobe left
+    400022: Frontal Lobe right
+    400024: Lamp
+    400026: Occipital lobe left
+    400028: Occipital lobe right
+    400030: Temporal Lobe left
+    400032: Temporal Lobe right
+    2000000: Camera
+    2100000: royal blue
+    2100002: purple
+    2100004: material_0
+    2100006: Red
+    2100008: pink
+    2100010: saddlebrown
+    2100012: dark yellow
+    2300000: brain stem
+    2300002: Cerebellum
+    2300004: Cerebral cortex left
+    2300006: Cerebral cortex right
+    2300008: default
+    2300010: default.005
+    2300012: default.008
+    2300014: Frontal Lobe left
+    2300016: Frontal Lobe right
+    2300018: Occipital lobe left
+    2300020: Occipital lobe right
+    2300022: Temporal Lobe left
+    2300024: Temporal Lobe right
+    3300000: brain stem
+    3300002: Cerebellum
+    3300004: Cerebral cortex left
+    3300006: Cerebral cortex right
+    3300008: default
+    3300010: default.005
+    3300012: default.008
+    3300014: Frontal Lobe left
+    3300016: Frontal Lobe right
+    3300018: Occipital lobe left
+    3300020: Occipital lobe right
+    3300022: Temporal Lobe left
+    3300024: Temporal Lobe right
+    4300000: Occipital lobe left
+    4300002: Occipital lobe right
+    4300004: Cerebral cortex right
+    4300006: Cerebral cortex left
+    4300008: default.008
+    4300010: Frontal Lobe right
+    4300012: Temporal Lobe right
+    4300014: default.005
+    4300016: brain stem
+    4300018: Cerebellum
+    4300020: Temporal Lobe left
+    4300022: Frontal Lobe left
+    4300024: default
+    10800000: Lamp
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
