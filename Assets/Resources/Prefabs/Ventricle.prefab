@@ -1926,7 +1926,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ObjectName: Ventricles
-  m_ObjectDescription: 
+  m_ObjectDescription: "Brain ventricles are a connected network of gaps in the \nbrain
+    containing cerebrospinal fluid that circulates through\nthe brain and to the spine.
+    The ventricles cushion the brain \nand spinal cord and provide protection from
+    knocks to the \nhead and also make the brain buoyant, supporting it from \nthe
+    effects of gravity."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: -0.5, y: 0.5, z: 0.5}
   m_TooltipSize: {x: 300, y: 300}
@@ -2180,7 +2184,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ObjectName: Ventricles
-  m_ObjectDescription: 
+  m_ObjectDescription: "Brain ventricles are a connected network of gaps in the \nbrain
+    containing cerebrospinal fluid that circulates through\nthe brain and to the spine.
+    The ventricles cushion the brain \nand spinal cord and provide protection from
+    knocks to the \nhead and also make the brain buoyant, supporting it from \nthe
+    effects of gravity."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: 0.5, y: -0.5, z: 0.5}
   m_TooltipSize: {x: 300, y: 300}

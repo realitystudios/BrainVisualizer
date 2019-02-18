@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 114688057873025882}
   - component: {fileID: 82131530149125784}
   m_Layer: 0
-  m_Name: default.005
+  m_Name: Pituitary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 114414503858081878}
   - component: {fileID: 82051964486680912}
   m_Layer: 0
-  m_Name: Cerebral cortex left
+  m_Name: Parietal Lobe left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 114371621811838480}
   - component: {fileID: 82426272889250804}
   m_Layer: 0
-  m_Name: default.008
+  m_Name: Corpus Callosum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 114284830206873450}
   - component: {fileID: 82904752210196698}
   m_Layer: 0
-  m_Name: Cerebral cortex right
+  m_Name: Parietal Lobe right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1392,7 +1392,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 37d3a1497c5132d4d9026d4ed933b1f9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1487,7 +1487,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9ec285eb81a32ee4993f7c7b72c66a0d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1677,7 +1677,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5d3636a6faec0e5488ffac68b210661f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1772,7 +1772,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1e503c6e97c6551498149ac17171a74d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1867,7 +1867,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 32b4e767767ff9a4c88c94ef855ab307, type: 3}
+  m_audioClip: {fileID: 8300000, guid: aa9f41cf7b6689c4cb46685c30b9ec05, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1962,7 +1962,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9ec285eb81a32ee4993f7c7b72c66a0d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2152,7 +2152,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 32b4e767767ff9a4c88c94ef855ab307, type: 3}
+  m_audioClip: {fileID: 8300000, guid: aa9f41cf7b6689c4cb46685c30b9ec05, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2247,7 +2247,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4d1cbb1025e792b4686e96c88f98beaa, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2342,7 +2342,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4d1cbb1025e792b4686e96c88f98beaa, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2437,7 +2437,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 37d3a1497c5132d4d9026d4ed933b1f9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2761,10 +2761,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ObjectName: Temporal Lobe
-  m_ObjectDescription: 
+  m_ObjectDescription: "The temporal lobe is home to our primary auditory cortex,
+    \nmeaning it is the area of the brain where sounds and \nlanguage are processed
+    and understood. The hippocampus \nis also located in the temporal lobe and is
+    a key region for \nmemory formation, processing and retrieval."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: 3, y: 5, z: -3}
-  m_TooltipSize: {x: 1500, y: 1500}
+  m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
 --- !u!114 &114168386372887572
 MonoBehaviour:
@@ -2855,10 +2858,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ObjectName: Occipital Lobe
-  m_ObjectDescription: 
+  m_ObjectDescription: "The occipital lobe is most commonly known for controlling
+    \nour eyes and the things we see. The primary visual cortex \nreceived and processed
+    information from the retinas before \ntransmitting this information to other parts
+    of the brain, such \nas the frontal lobe, to allow us to respond to incoming visual
+    \ninformation"
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: -3, y: -5, z: -1}
-  m_TooltipSize: {x: 1500, y: 1500}
+  m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
 --- !u!114 &114210677313018338
 MonoBehaviour:
@@ -3001,11 +3008,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4affacbc44c4e18468aa57e9942d75da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ObjectName: Cerebral Cortex
-  m_ObjectDescription: 
+  m_ObjectName: Parietal Lobe
+  m_ObjectDescription: "The parietal lobe is generally known for its ability to \nprocess
+    sensory information such as touch or pain. \nThis lobe processes basic incoming
+    sensory stimuli \nbefore sending this information to the frontal lobe \nto form
+    our behavioural response\r"
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: -3, y: -5, z: 3}
-  m_TooltipSize: {x: 1500, y: 1500}
+  m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
 --- !u!114 &114307567264497164
 MonoBehaviour:
@@ -3053,10 +3063,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ObjectName: Frontal Lobe
-  m_ObjectDescription: "Frontal Lobe controls: \nmemory\nreasoning\nmovement"
+  m_ObjectDescription: "The frontal lobe is associated with many different roles \nincluding
+    general reasoning, deep thought, motor abilities \nand expressive language (such
+    as how we convey \nemotion with our hands etc). The frontal lobe generally \nreceives
+    input from many different parts of the brain and \ncombines the information to
+    allow us to behave and \nrespond in the most socially appropriate way."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: 3, y: 5, z: 3}
-  m_TooltipSize: {x: 1500, y: 1500}
+  m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
 --- !u!114 &114323770645039656
 MonoBehaviour:
@@ -3150,11 +3164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4affacbc44c4e18468aa57e9942d75da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ObjectName: 
+  m_ObjectName: Corpus Callosum
   m_ObjectDescription: 
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: 3, y: 5, z: 3}
-  m_TooltipSize: {x: 1500, y: 1500}
+  m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
 --- !u!114 &114385511820722394
 MonoBehaviour:
@@ -3195,11 +3209,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4affacbc44c4e18468aa57e9942d75da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ObjectName: Cerebral Cortex
-  m_ObjectDescription: 
+  m_ObjectName: Parietal Lobe
+  m_ObjectDescription: "The parietal lobe is generally known for its ability to \nprocess
+    sensory information such as touch or pain. \nThis lobe processes basic incoming
+    sensory stimuli \nbefore sending this information to the frontal lobe \nto form
+    our behavioural response\r"
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: -3, y: 5, z: 3}
-  m_TooltipSize: {x: 1500, y: 1500}
+  m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
 --- !u!114 &114416664346313616
 MonoBehaviour:
@@ -3213,10 +3230,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ObjectName: Frontal Lobe
-  m_ObjectDescription: "Frontal Lobe controls: \nmemory\nreasoning\nmovement"
+  m_ObjectDescription: "The frontal lobe is associated with many different roles \nincluding
+    general reasoning, deep thought, motor abilities \nand expressive language (such
+    as how we convey \nemotion with our hands etc). The frontal lobe generally \nreceives
+    input from many different parts of the brain and \ncombines the information to
+    allow us to behave and \nrespond in the most socially appropriate way."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: 3, y: -5, z: 3}
-  m_TooltipSize: {x: 1500, y: 1500}
+  m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
 --- !u!114 &114438535797901580
 MonoBehaviour:
@@ -3302,10 +3323,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ObjectName: Cerebellum
-  m_ObjectDescription: 
+  m_ObjectDescription: "The cerebellum, or \u201CLittle brain\u201D receives information
+    from \nthe inner ear and other sensory nerves to aid coordination, \nbalance and
+    fluid movements (like walking). Although the \ncerebellum takes up only 10% of
+    total brain size, it contains \nabout 50% of the total number of neurons in the
+    brain.\r"
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
-  m_TooltipOffset: {x: -2, y: 5, z: -3}
-  m_TooltipSize: {x: 1500, y: 1500}
+  m_TooltipOffset: {x: -2, y: 0, z: -5}
+  m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
 --- !u!114 &114560517147718044
 MonoBehaviour:
@@ -3570,11 +3595,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4affacbc44c4e18468aa57e9942d75da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ObjectName: 
+  m_ObjectName: Pituitary Gland
   m_ObjectDescription: 
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: 3, y: 5, z: 3}
-  m_TooltipSize: {x: 1500, y: 1500}
+  m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
 --- !u!114 &114703550260671260
 MonoBehaviour:
@@ -3599,10 +3624,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ObjectName: Temporal Lobe
-  m_ObjectDescription: 
+  m_ObjectDescription: "The temporal lobe is home to our primary auditory cortex,
+    \nmeaning it is the area of the brain where sounds and \nlanguage are processed
+    and understood. The hippocampus \nis also located in the temporal lobe and is
+    a key region for \nmemory formation, processing and retrieval."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: 3, y: -5, z: -3}
-  m_TooltipSize: {x: 1500, y: 1500}
+  m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
 --- !u!114 &114712416868434672
 MonoBehaviour:
@@ -3708,10 +3736,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ObjectName: Brain Stem
-  m_ObjectDescription: 
+  m_ObjectDescription: "The brain stem is made up of 3 different parts: \nthe midbrain,
+    the medulla and the pons. \nMidbrain: relay system for the auditory and visual\ninformation.
+    \nMedulla: controls automatic bodily functions such as heart\nrate, blood pressure
+    and breathing. \nPons: controls many automatic bodily functions such as\ncontrolling
+    sleep/wake cycles."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
-  m_TooltipOffset: {x: 0, y: 5, z: -3}
-  m_TooltipSize: {x: 1500, y: 1500}
+  m_TooltipOffset: {x: -3, y: 0, z: -3}
+  m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
 --- !u!114 &114834342958896120
 MonoBehaviour:
@@ -3742,10 +3774,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ObjectName: Occipital Lobe
-  m_ObjectDescription: 
+  m_ObjectDescription: "The occipital lobe is most commonly known for controlling
+    \nour eyes and the things we see. The primary visual cortex \nreceived and processed
+    information from the retinas before \ntransmitting this information to other parts
+    of the brain, such \nas the frontal lobe, to allow us to respond to incoming visual
+    \ninformation"
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: -3, y: 5, z: -1}
-  m_TooltipSize: {x: 1500, y: 1500}
+  m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
 --- !u!114 &114862543496880024
 MonoBehaviour:

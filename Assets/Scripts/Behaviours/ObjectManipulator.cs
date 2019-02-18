@@ -16,10 +16,27 @@ public class ObjectManipulator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //ModelManager.Instance.GetCurrentModel().transform.Rotate(Vector3.back, Mathf.Lerp(m_Controller.GetTouchpadAxis().x, m_XPrev, Time.deltaTime));
-        //ModelManager.Instance.GetCurrentModel().transform.Rotate(Vector3.up, Mathf.Lerp(m_Controller.GetTouchpadAxis().y, m_YPrev, Time.deltaTime));
+        float xVector = m_Controller.GetTouchpadAxis().x - m_XPrev;
+        float yVector = m_Controller.GetTouchpadAxis().y - m_YPrev;
 
-        Debug.Log(m_Controller.GetTouchpadAxis().x - m_XPrev);
+        /*if (xVector < 0)
+        {
+            ModelManager.Instance.GetCurrentModel().transform.Rotate(Vector3.back, -0.1f);
+        } else if (xVector > 0)
+        {
+            ModelManager.Instance.GetCurrentModel().transform.Rotate(Vector3.back, 1.0f);
+        }
+
+        if (yVector < 0)
+        {
+            ModelManager.Instance.GetCurrentModel().transform.Rotate(Vector3.back, -0.1f);
+        }
+        else if (yVector > 0)
+        {
+            ModelManager.Instance.GetCurrentModel().transform.Rotate(Vector3.back, 1.0f);
+        }*/
+
+        if (m_Controller.GetTouchpadAxis().x - m_XPrev != 0) Debug.Log(m_Controller.GetTouchpadAxis().x - m_XPrev);
 
         m_XPrev = m_Controller.GetTouchpadAxis().x;
         m_YPrev = m_Controller.GetTouchpadAxis().y;
