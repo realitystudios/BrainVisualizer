@@ -10,7 +10,7 @@ public class ObjectDescriptor : MonoBehaviour {
     [Header("Object Information")]
     [SerializeField]
     private string m_ObjectName;
-    [SerializeField, TextArea]
+    [SerializeField, TextArea(5,10)]
     private string m_ObjectDescription;
 
     [Header("Tooltip Options")]
@@ -74,6 +74,11 @@ public class ObjectDescriptor : MonoBehaviour {
             m_CurrentTooltip.drawLineTo = transform;
 
             m_CurrentTooltip.UpdateText(m_ObjectName + '\n' + m_ObjectDescription);
+
+            if (GetComponent<AudioSource>().clip != null)
+            {
+                GetComponent<AudioSource>().Play();
+            }
         }
         else
         {
@@ -83,6 +88,9 @@ public class ObjectDescriptor : MonoBehaviour {
 
     public void HideDescription()
     {
+        if (GetComponent<AudioSource>().isPlaying)
+            GetComponent<AudioSource>().Stop();
+
         Destroy(m_CurrentTooltip.gameObject);
     }
 
