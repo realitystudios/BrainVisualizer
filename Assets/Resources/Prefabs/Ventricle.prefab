@@ -1586,8 +1586,8 @@ MonoBehaviour:
   m_ObjectDescription: 
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: -0.25, y: 0.5, z: 0.5}
-  m_TooltipSize: {x: 300, y: 300}
-  m_TooltipFontSize: 60
+  m_TooltipSize: {x: 1500, y: 500}
+  m_TooltipFontSize: 50
 --- !u!114 &114181361932450312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1635,8 +1635,8 @@ MonoBehaviour:
   m_ObjectDescription: 
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: 0, y: -0.5, z: -0.25}
-  m_TooltipSize: {x: 300, y: 300}
-  m_TooltipFontSize: 60
+  m_TooltipSize: {x: 1500, y: 500}
+  m_TooltipFontSize: 50
 --- !u!114 &114297039006841186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1748,8 +1748,8 @@ MonoBehaviour:
   m_ObjectDescription: 
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: 0.25, y: 0.5, z: 0.5}
-  m_TooltipSize: {x: 300, y: 300}
-  m_TooltipFontSize: 60
+  m_TooltipSize: {x: 1500, y: 500}
+  m_TooltipFontSize: 50
 --- !u!114 &114333558409630492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1901,8 +1901,8 @@ MonoBehaviour:
   m_ObjectDescription: 
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: 0, y: -0.5, z: 0}
-  m_TooltipSize: {x: 300, y: 300}
-  m_TooltipFontSize: 60
+  m_TooltipSize: {x: 1500, y: 500}
+  m_TooltipFontSize: 50
 --- !u!114 &114512865246759666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1933,8 +1933,8 @@ MonoBehaviour:
     effects of gravity."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: -0.5, y: 0.5, z: 0.5}
-  m_TooltipSize: {x: 300, y: 300}
-  m_TooltipFontSize: 60
+  m_TooltipSize: {x: 1500, y: 500}
+  m_TooltipFontSize: 50
 --- !u!114 &114563371422632614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2191,8 +2191,8 @@ MonoBehaviour:
     effects of gravity."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: 0.5, y: -0.5, z: 0.5}
-  m_TooltipSize: {x: 300, y: 300}
-  m_TooltipFontSize: 60
+  m_TooltipSize: {x: 1500, y: 500}
+  m_TooltipFontSize: 50
 --- !u!114 &114923850679100576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2261,8 +2261,8 @@ MonoBehaviour:
   m_ObjectDescription: 
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 2}
   m_TooltipOffset: {x: 0, y: 0.5, z: 0}
-  m_TooltipSize: {x: 300, y: 300}
-  m_TooltipFontSize: 60
+  m_TooltipSize: {x: 1500, y: 500}
+  m_TooltipFontSize: 50
 --- !u!114 &114995004195308928
 MonoBehaviour:
   m_ObjectHideFlags: 1
