@@ -64,6 +64,11 @@ public class ObjectDescriptor : MonoBehaviour {
     {
         if (m_Tooltip != null)
         {
+            foreach(ObjectDescriptor obj in transform.parent.GetComponentsInChildren<ObjectDescriptor>())
+            {
+                obj.HideDescription();
+            }
+
             m_CurrentTooltip = Instantiate(m_Tooltip, transform).GetComponent<ObjectTooltip>();
 
             m_CurrentTooltip.transform.localPosition = m_TooltipOffset;
@@ -91,7 +96,8 @@ public class ObjectDescriptor : MonoBehaviour {
         if (GetComponent<AudioSource>().isPlaying)
             GetComponent<AudioSource>().Stop();
 
-        Destroy(m_CurrentTooltip.gameObject);
+        if (m_CurrentTooltip != null)
+            Destroy(m_CurrentTooltip.gameObject);
     }
 
     public void PlayAudio()
