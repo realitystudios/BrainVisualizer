@@ -1,0 +1,19 @@
+For the given scripts to work you should download Oculus Utilities and 
+Easy-Controller-Selection and then import these packages in your unity project.
+
+Oculus Utilities
+https://developer.oculus.com/downloads/package/oculus-utilities-for-unity-5/
+
+Easy-Controller-Selection
+https://developer.oculus.com/blog/easy-controller-selection/
+
+Note:- Convert all .txt files in Scripts to .cs
+
+1.Create your own object for grabbing.
+2.Create your own object for rotation.
+3.Create two objects for switching.
+4.Drag ovrplayercontroller in hierarchy.
+5.Add VrgRightGrabber prefab in hierarchy and make it child to TrackingSpace.
+6.After that add Teleporter Controller to Vrg Right Controller.
+7.Then add selection_visualizer prefab in hierarchy.
+
