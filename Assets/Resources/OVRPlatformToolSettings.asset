@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: OVRPlatformToolSettings
   m_EditorClassIdentifier: Oculus.VR.Editor:Assets.Oculus.VR.Editor:OVRPlatformTool/OVRPlatformToolSettings
-  appID: 2089488387803211
-  appToken: a2404dda5a81a7019e61772417670a50
-  releaseNote: Initial build of Application
-  releaseChannel: ALPHA
+  appID: 
+  appToken: 
+  releaseNote: 
+  releaseChannel: Beta
   riftBuildDiretory: 
   riftBuildVersion: 
   riftLaunchFile: 
-  apkBuildPath: D:\Development\Unity\BrainVisualizer\Build\BrainViz.apk
+  apkBuildPath: 

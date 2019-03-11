@@ -26,10 +26,10 @@ GameObject:
   - component: {fileID: 114244495187181466}
   - component: {fileID: 114600801809605954}
   - component: {fileID: 114712416868434672}
-  - component: {fileID: 114992812505118092}
   - component: {fileID: 114647010374666792}
   - component: {fileID: 114709623992432350}
   - component: {fileID: 82338075980370796}
+  - component: {fileID: 114304379435837480}
   m_Layer: 0
   m_Name: Temporal Lobe right
   m_TagString: Untagged
@@ -52,10 +52,10 @@ GameObject:
   - component: {fileID: 114160185638944532}
   - component: {fileID: 114743896594220960}
   - component: {fileID: 114035463063066364}
-  - component: {fileID: 114623587947357222}
   - component: {fileID: 114560517147718044}
   - component: {fileID: 114416664346313616}
   - component: {fileID: 82427037262517124}
+  - component: {fileID: 114164375202418560}
   m_Layer: 0
   m_Name: Frontal Lobe right
   m_TagString: Untagged
@@ -78,10 +78,10 @@ GameObject:
   - component: {fileID: 114231346577467432}
   - component: {fileID: 114388277614845510}
   - component: {fileID: 114342607484464954}
-  - component: {fileID: 114633794559994110}
   - component: {fileID: 114040407204111356}
   - component: {fileID: 114688057873025882}
   - component: {fileID: 82131530149125784}
+  - component: {fileID: 114012549386465754}
   m_Layer: 0
   m_Name: Pituitary
   m_TagString: Untagged
@@ -104,10 +104,10 @@ GameObject:
   - component: {fileID: 114716582876332812}
   - component: {fileID: 114073420749131242}
   - component: {fileID: 114530541815424330}
-  - component: {fileID: 114311714883603830}
   - component: {fileID: 114572543589709778}
   - component: {fileID: 114414503858081878}
   - component: {fileID: 82051964486680912}
+  - component: {fileID: 114914184221496360}
   m_Layer: 0
   m_Name: Parietal Lobe left
   m_TagString: Untagged
@@ -130,10 +130,10 @@ GameObject:
   - component: {fileID: 114080073696864400}
   - component: {fileID: 114269120941552728}
   - component: {fileID: 114168386372887572}
-  - component: {fileID: 114014120897005114}
   - component: {fileID: 114438535797901580}
   - component: {fileID: 114371621811838480}
   - component: {fileID: 82426272889250804}
+  - component: {fileID: 114020241214129862}
   m_Layer: 0
   m_Name: Corpus Callosum
   m_TagString: Untagged
@@ -156,10 +156,10 @@ GameObject:
   - component: {fileID: 114610030150464992}
   - component: {fileID: 114203023979987606}
   - component: {fileID: 114077544232095742}
-  - component: {fileID: 114091003340639006}
   - component: {fileID: 114210677313018338}
   - component: {fileID: 114858165928147054}
   - component: {fileID: 82642034344781148}
+  - component: {fileID: 114262001714508916}
   m_Layer: 0
   m_Name: Occipital lobe left
   m_TagString: Untagged
@@ -175,6 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4818518228264132}
+  - component: {fileID: 114463107890594544}
   m_Layer: 0
   m_Name: Brain
   m_TagString: Untagged
@@ -197,10 +198,10 @@ GameObject:
   - component: {fileID: 114927567945044938}
   - component: {fileID: 114637446412082514}
   - component: {fileID: 114307567264497164}
-  - component: {fileID: 114834342958896120}
   - component: {fileID: 114672124773909628}
   - component: {fileID: 114810663895795996}
   - component: {fileID: 82208754533092352}
+  - component: {fileID: 114070894866915066}
   m_Layer: 0
   m_Name: brain stem
   m_TagString: Untagged
@@ -223,10 +224,10 @@ GameObject:
   - component: {fileID: 114323770645039656}
   - component: {fileID: 114158559519652244}
   - component: {fileID: 114906823437516078}
-  - component: {fileID: 114676116247470664}
   - component: {fileID: 114632661658963822}
   - component: {fileID: 114538866191226792}
   - component: {fileID: 82139407952866436}
+  - component: {fileID: 114700596516829702}
   m_Layer: 0
   m_Name: Cerebellum
   m_TagString: Untagged
@@ -249,10 +250,10 @@ GameObject:
   - component: {fileID: 114790669084891040}
   - component: {fileID: 114602617675231182}
   - component: {fileID: 114108210908844458}
-  - component: {fileID: 114122271892903922}
   - component: {fileID: 114129246993275598}
   - component: {fileID: 114208207557410216}
   - component: {fileID: 82536978930719240}
+  - component: {fileID: 114259659092935574}
   m_Layer: 0
   m_Name: Occipital lobe right
   m_TagString: Untagged
@@ -275,10 +276,10 @@ GameObject:
   - component: {fileID: 114355866815995488}
   - component: {fileID: 114678794456609408}
   - component: {fileID: 114228338256330778}
-  - component: {fileID: 114200952343626862}
   - component: {fileID: 114625374462630494}
   - component: {fileID: 114314734709589044}
   - component: {fileID: 82278528646949082}
+  - component: {fileID: 114399037850770440}
   m_Layer: 0
   m_Name: Frontal Lobe left
   m_TagString: Untagged
@@ -301,10 +302,10 @@ GameObject:
   - component: {fileID: 114195413101041744}
   - component: {fileID: 114646832372518970}
   - component: {fileID: 114958158113107324}
-  - component: {fileID: 114510639934771360}
   - component: {fileID: 114282691518119088}
   - component: {fileID: 114164706651544894}
   - component: {fileID: 82088876413051868}
+  - component: {fileID: 114075815876011786}
   m_Layer: 0
   m_Name: Temporal Lobe left
   m_TagString: Untagged
@@ -327,10 +328,10 @@ GameObject:
   - component: {fileID: 114970352723862028}
   - component: {fileID: 114703550260671260}
   - component: {fileID: 114862543496880024}
-  - component: {fileID: 114385511820722394}
   - component: {fileID: 114492210454581280}
   - component: {fileID: 114284830206873450}
   - component: {fileID: 82904752210196698}
+  - component: {fileID: 114410361990174118}
   m_Layer: 0
   m_Name: Parietal Lobe right
   m_TagString: Untagged
@@ -347,7 +348,7 @@ Transform:
   m_LocalRotation: {x: 0.000000008381904, y: 0.000000014901163, z: 0.0000000023283067,
     w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4818518228264132}
   m_RootOrder: 7
@@ -361,7 +362,7 @@ Transform:
   m_LocalRotation: {x: 0.000000008381904, y: 0.000000014901163, z: 0.0000000023283067,
     w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4818518228264132}
   m_RootOrder: 8
@@ -375,7 +376,7 @@ Transform:
   m_LocalRotation: {x: 0.000000008381904, y: 0.000000014901163, z: 0.0000000023283067,
     w: 1}
   m_LocalPosition: {x: 5.9604643e-10, y: -0.050054077, z: 0.0000000073015687}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4818518228264132}
   m_RootOrder: 9
@@ -389,7 +390,7 @@ Transform:
   m_LocalRotation: {x: 0.000000008381904, y: 0.000000014901163, z: 0.0000000023283067,
     w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4818518228264132}
   m_RootOrder: 3
@@ -403,7 +404,7 @@ Transform:
   m_LocalRotation: {x: 0.000000008381904, y: 0.000000014901163, z: 0.0000000023283067,
     w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4818518228264132}
   m_RootOrder: 6
@@ -417,7 +418,7 @@ Transform:
   m_LocalRotation: {x: 0.000000008381904, y: 0.000000014901163, z: 0.0000000023283067,
     w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4818518228264132}
   m_RootOrder: 0
@@ -431,7 +432,7 @@ Transform:
   m_LocalRotation: {x: 0.000000008381904, y: 0.000000014901163, z: 0.0000000023283067,
     w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4818518228264132}
   m_RootOrder: 11
@@ -445,7 +446,7 @@ Transform:
   m_LocalRotation: {x: 0.000000008381904, y: 0.000000014901163, z: 0.0000000023283067,
     w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4818518228264132}
   m_RootOrder: 10
@@ -459,7 +460,7 @@ Transform:
   m_LocalRotation: {x: 0.000000008381904, y: 0.000000014901163, z: 0.0000000023283067,
     w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4818518228264132}
   m_RootOrder: 5
@@ -498,7 +499,7 @@ Transform:
   m_LocalRotation: {x: 0.000000008381904, y: 0.000000014901163, z: 0.0000000023283067,
     w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4818518228264132}
   m_RootOrder: 2
@@ -512,7 +513,7 @@ Transform:
   m_LocalRotation: {x: 0.000000008381904, y: 0.000000014901163, z: 0.0000000023283067,
     w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4818518228264132}
   m_RootOrder: 4
@@ -526,7 +527,7 @@ Transform:
   m_LocalRotation: {x: 0.000000008381904, y: 0.000000014901163, z: 0.0000000023283067,
     w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4818518228264132}
   m_RootOrder: 1
@@ -2523,7 +2524,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114014120897005114
+--- !u!114 &114012549386465754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1094421902679204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
+--- !u!114 &114020241214129862
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2531,15 +2547,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384607073875806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  thickness: 1
-  customOutlineModels: []
-  customOutlineModelPaths: []
-  enableSubmeshHighlight: 0
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
 --- !u!114 &114035463063066364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2569,13 +2583,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 0, g: 1, b: 0.09604788, a: 1}
+  touchHighlight: {r: 0.9716981, g: 0, b: 0.8528736, a: 1}
   grabHighlight: {r: 0, g: 0, b: 0, a: 0}
   useHighlight: {r: 0, g: 0, b: 0, a: 0}
   objectToMonitor: {fileID: 0}
   objectToHighlight: {fileID: 0}
   objectHighlighter: {fileID: 0}
   objectToAffect: {fileID: 0}
+--- !u!114 &114070894866915066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1439319730594342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
 --- !u!114 &114073420749131242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2587,6 +2616,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114075815876011786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1943727828652786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
 --- !u!114 &114077544232095742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2636,23 +2680,6 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
---- !u!114 &114091003340639006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1415482161612266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  unhighlightOnDisable: 1
-  thickness: 1
-  customOutlineModels: []
-  customOutlineModelPaths: []
-  enableSubmeshHighlight: 0
 --- !u!114 &114108210908844458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2670,23 +2697,6 @@ MonoBehaviour:
   throwVelocityWithAttachDistance: 0
   throwMultiplier: 1
   onGrabCollisionDelay: 0
---- !u!114 &114122271892903922
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1657260740043670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  unhighlightOnDisable: 1
-  thickness: 1
-  customOutlineModels: []
-  customOutlineModelPaths: []
-  enableSubmeshHighlight: 0
 --- !u!114 &114129246993275598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2699,7 +2709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 0, g: 1, b: 0.09604788, a: 1}
+  touchHighlight: {r: 0.9716981, g: 0, b: 0.8528736, a: 1}
   grabHighlight: {r: 0, g: 0, b: 0, a: 0}
   useHighlight: {r: 0, g: 0, b: 0, a: 0}
   objectToMonitor: {fileID: 0}
@@ -2749,6 +2759,21 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &114164375202418560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1074938211837646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
 --- !u!114 &114164706651544894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2818,23 +2843,6 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
---- !u!114 &114200952343626862
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1807180932852238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  unhighlightOnDisable: 1
-  thickness: 1
-  customOutlineModels: []
-  customOutlineModelPaths: []
-  enableSubmeshHighlight: 0
 --- !u!114 &114203023979987606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2879,7 +2887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 0, g: 1, b: 0.09604788, a: 1}
+  touchHighlight: {r: 0.9716981, g: 0, b: 0.8528736, a: 1}
   grabHighlight: {r: 0, g: 0, b: 0, a: 0}
   useHighlight: {r: 0, g: 0, b: 0, a: 0}
   objectToMonitor: {fileID: 0}
@@ -2967,6 +2975,36 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!114 &114259659092935574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1657260740043670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
+--- !u!114 &114262001714508916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1415482161612266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
 --- !u!114 &114269120941552728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2990,7 +3028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 0, g: 1, b: 0.09604788, a: 1}
+  touchHighlight: {r: 0.9716981, g: 0, b: 0.8528736, a: 1}
   grabHighlight: {r: 0, g: 0, b: 0, a: 0}
   useHighlight: {r: 0, g: 0, b: 0, a: 0}
   objectToMonitor: {fileID: 0}
@@ -3017,6 +3055,21 @@ MonoBehaviour:
   m_TooltipOffset: {x: -3, y: -5, z: 3}
   m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
+--- !u!114 &114304379435837480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1042678381591528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
 --- !u!114 &114307567264497164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3034,23 +3087,6 @@ MonoBehaviour:
   throwVelocityWithAttachDistance: 0
   throwMultiplier: 1
   onGrabCollisionDelay: 0
---- !u!114 &114311714883603830
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1111903569959712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  unhighlightOnDisable: 1
-  thickness: 1
-  customOutlineModels: []
-  customOutlineModelPaths: []
-  enableSubmeshHighlight: 0
 --- !u!114 &114314734709589044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3170,23 +3206,6 @@ MonoBehaviour:
   m_TooltipOffset: {x: 3, y: 5, z: 3}
   m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
---- !u!114 &114385511820722394
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1986131634721656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  unhighlightOnDisable: 1
-  thickness: 1
-  customOutlineModels: []
-  customOutlineModelPaths: []
-  enableSubmeshHighlight: 0
 --- !u!114 &114388277614845510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3198,6 +3217,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114399037850770440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1807180932852238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
+--- !u!114 &114410361990174118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1986131634721656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
 --- !u!114 &114414503858081878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3251,13 +3300,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 0, g: 1, b: 0.09604788, a: 1}
+  touchHighlight: {r: 0.9716981, g: 0, b: 0.8528736, a: 1}
   grabHighlight: {r: 0, g: 0, b: 0, a: 0}
   useHighlight: {r: 0, g: 0, b: 0, a: 0}
   objectToMonitor: {fileID: 0}
   objectToHighlight: {fileID: 0}
   objectHighlighter: {fileID: 0}
   objectToAffect: {fileID: 0}
+--- !u!114 &114463107890594544
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1429985415019220}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0016c5f5974d14bbf0818c9e4a6471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smooth: 1.5
 --- !u!114 &114492210454581280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3270,30 +3331,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 0, g: 1, b: 0.09604788, a: 1}
+  touchHighlight: {r: 0.9716981, g: 0, b: 0.8528736, a: 1}
   grabHighlight: {r: 0, g: 0, b: 0, a: 0}
   useHighlight: {r: 0, g: 0, b: 0, a: 0}
   objectToMonitor: {fileID: 0}
   objectToHighlight: {fileID: 0}
   objectHighlighter: {fileID: 0}
   objectToAffect: {fileID: 0}
---- !u!114 &114510639934771360
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1943727828652786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  unhighlightOnDisable: 1
-  thickness: 1
-  customOutlineModels: []
-  customOutlineModelPaths: []
-  enableSubmeshHighlight: 0
 --- !u!114 &114530541815424330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3344,7 +3388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 0, g: 1, b: 0.09604788, a: 1}
+  touchHighlight: {r: 0.9716981, g: 0, b: 0.8528736, a: 1}
   grabHighlight: {r: 0, g: 0, b: 0, a: 0}
   useHighlight: {r: 0, g: 0, b: 0, a: 0}
   objectToMonitor: {fileID: 0}
@@ -3363,7 +3407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 0, g: 1, b: 0.09604788, a: 1}
+  touchHighlight: {r: 0.9716981, g: 0, b: 0.8528736, a: 1}
   grabHighlight: {r: 0, g: 0, b: 0, a: 0}
   useHighlight: {r: 0, g: 0, b: 0, a: 0}
   objectToMonitor: {fileID: 0}
@@ -3424,23 +3468,6 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
---- !u!114 &114623587947357222
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1074938211837646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  unhighlightOnDisable: 1
-  thickness: 1
-  customOutlineModels: []
-  customOutlineModelPaths: []
-  enableSubmeshHighlight: 0
 --- !u!114 &114625374462630494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3453,7 +3480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 0, g: 1, b: 0.09604788, a: 1}
+  touchHighlight: {r: 0.9716981, g: 0, b: 0.8528736, a: 1}
   grabHighlight: {r: 0, g: 0, b: 0, a: 0}
   useHighlight: {r: 0, g: 0, b: 0, a: 0}
   objectToMonitor: {fileID: 0}
@@ -3472,30 +3499,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 0, g: 1, b: 0.09604788, a: 1}
+  touchHighlight: {r: 0.9716981, g: 0, b: 0.8528736, a: 1}
   grabHighlight: {r: 0, g: 0, b: 0, a: 0}
   useHighlight: {r: 0, g: 0, b: 0, a: 0}
   objectToMonitor: {fileID: 0}
   objectToHighlight: {fileID: 0}
   objectHighlighter: {fileID: 0}
   objectToAffect: {fileID: 0}
---- !u!114 &114633794559994110
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1094421902679204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  unhighlightOnDisable: 1
-  thickness: 1
-  customOutlineModels: []
-  customOutlineModelPaths: []
-  enableSubmeshHighlight: 0
 --- !u!114 &114637446412082514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3530,7 +3540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 0, g: 1, b: 0.09604788, a: 1}
+  touchHighlight: {r: 0.9716981, g: 0, b: 0.8528736, a: 1}
   grabHighlight: {r: 0, g: 0, b: 0, a: 0}
   useHighlight: {r: 0, g: 0, b: 0, a: 0}
   objectToMonitor: {fileID: 0}
@@ -3549,30 +3559,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearTouchHighlight: {r: 0, g: 0, b: 0, a: 0}
-  touchHighlight: {r: 0, g: 1, b: 0.09604788, a: 1}
+  touchHighlight: {r: 0.9716981, g: 0, b: 0.8528736, a: 1}
   grabHighlight: {r: 0, g: 0, b: 0, a: 0}
   useHighlight: {r: 0, g: 0, b: 0, a: 0}
   objectToMonitor: {fileID: 0}
   objectToHighlight: {fileID: 0}
   objectHighlighter: {fileID: 0}
   objectToAffect: {fileID: 0}
---- !u!114 &114676116247470664
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1443833615752606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  unhighlightOnDisable: 1
-  thickness: 1
-  customOutlineModels: []
-  customOutlineModelPaths: []
-  enableSubmeshHighlight: 0
 --- !u!114 &114678794456609408
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3601,6 +3594,21 @@ MonoBehaviour:
   m_TooltipOffset: {x: 3, y: 5, z: 3}
   m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
+--- !u!114 &114700596516829702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443833615752606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
 --- !u!114 &114703550260671260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3745,23 +3753,6 @@ MonoBehaviour:
   m_TooltipOffset: {x: -3, y: 0, z: -3}
   m_TooltipSize: {x: 5500, y: 3000}
   m_TooltipFontSize: 150
---- !u!114 &114834342958896120
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1439319730594342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  unhighlightOnDisable: 1
-  thickness: 1
-  customOutlineModels: []
-  customOutlineModelPaths: []
-  enableSubmeshHighlight: 0
 --- !u!114 &114858165928147054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3817,6 +3808,21 @@ MonoBehaviour:
   throwVelocityWithAttachDistance: 0
   throwMultiplier: 1
   onGrabCollisionDelay: 0
+--- !u!114 &114914184221496360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1111903569959712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  unhighlightOnDisable: 1
+  emissionDarken: 50
+  customMaterial: {fileID: 0}
 --- !u!114 &114927567945044938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3898,20 +3904,3 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
---- !u!114 &114992812505118092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1042678381591528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 1
-  unhighlightOnDisable: 1
-  thickness: 1
-  customOutlineModels: []
-  customOutlineModelPaths: []
-  enableSubmeshHighlight: 0
