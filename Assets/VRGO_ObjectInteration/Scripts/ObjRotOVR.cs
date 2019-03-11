@@ -13,7 +13,7 @@ public class ObjRotOVR : MonoBehaviour
 		targetRotation = transform.rotation;
 	}
 
-    private void OnTriggerStay()
+    private void Update()
     {
         Debug.Log("compared");
 		if (OVRInput.Get(OVRInput.Button.Right))
