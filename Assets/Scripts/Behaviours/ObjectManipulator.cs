@@ -24,12 +24,8 @@ public class ObjectManipulator : MonoBehaviour {
     {
         if (m_Controller.touchpadTouched)
         {
-
-            ModelManager.Instance.GetCurrentModel().transform.Rotate(Vector3.back, m_Controller.GetTouchpadAxis().x * 40 * Time.deltaTime);
-
-            /*Vector2 m_TmpVector;
-
-            Debug.Log(m_XVector);
+            
+            Vector2 m_TmpVector;
 
             if (m_Controller.GetTouchpadAxis().x < -0.01 || m_Controller.GetTouchpadAxis().x > 0.01)
             {
@@ -39,8 +35,7 @@ public class ObjectManipulator : MonoBehaviour {
             {
                 m_TmpVector.x = m_PrevVector.x;
             }
-
-            Mathf.Clamp(m_TmpVector.x, -1, 1);
+            
 
             if (m_TmpVector.x < -0.01)
             {
@@ -49,12 +44,13 @@ public class ObjectManipulator : MonoBehaviour {
                 {
                     m_XVector += 360;
                 }
-                Debug.Log("Vector (Negative): " + m_XVector);
-                m_TargetRotation *= Quaternion.AngleAxis(m_XVector * 5, Vector3.back);
-                ModelManager.Instance.GetCurrentModel().transform.rotation = Quaternion.Lerp(
+
+                //m_TargetRotation *= Quaternion.AngleAxis(m_XVector * 5, Vector3.back);
+                /*ModelManager.Instance.GetCurrentModel().transform.rotation = Quaternion.RotateTowards(
                     ModelManager.Instance.GetCurrentModel().transform.rotation,
                     m_TargetRotation, 5 * m_RotationSmoothing * Time.deltaTime
-                );
+                );*/
+                
             }
             else if (m_TmpVector.x > 0.01)
             {
@@ -63,16 +59,17 @@ public class ObjectManipulator : MonoBehaviour {
                 {
                     m_XVector -= 360;
                 }
-                Debug.Log("Vector (Positive): " + m_XVector);
-                m_TargetRotation *= Quaternion.AngleAxis(m_XVector * 5, Vector3.back);
-                ModelManager.Instance.GetCurrentModel().transform.rotation = Quaternion.Lerp(
+                
+                //m_TargetRotation *= Quaternion.AngleAxis(m_XVector * 5, Vector3.back);
+                /*ModelManager.Instance.GetCurrentModel().transform.rotation = Quaternion.RotateTowards(
                     ModelManager.Instance.GetCurrentModel().transform.rotation,
                     m_TargetRotation, 5 * m_RotationSmoothing * Time.deltaTime
-                );
+                );*/
+
             }
-            //}
+
             
-            /*if (m_Controller.GetTouchpadAxis().x < 0.1 && m_Controller.GetTouchpadAxis().x > -0.1)
+            if (m_Controller.GetTouchpadAxis().x < 0.1 && m_Controller.GetTouchpadAxis().x > -0.1)
             {
                 if (m_Controller.GetTouchpadAxis().y < -0.01 || m_Controller.GetTouchpadAxis().y > 0.01)
                 {
@@ -90,12 +87,12 @@ public class ObjectManipulator : MonoBehaviour {
                         m_YVector = 360;
                     }
                     m_YVector -= Mathf.Abs(m_TmpVector.y);
-                    Debug.Log("Vector (Negative): " + m_XVector);
+                    /*Debug.Log("Vector (Negative): " + m_XVector);
                     m_TargetRotation *= Quaternion.AngleAxis(m_YVector * 5, Vector3.up);
                     ModelManager.Instance.GetCurrentModel().transform.rotation = Quaternion.Lerp(
                         ModelManager.Instance.GetCurrentModel().transform.rotation,
                         m_TargetRotation, 5 * m_RotationSmoothing * Time.deltaTime
-                    );
+                    );*/
                 }
                 else if (m_TmpVector.y > 0.01)
                 {
@@ -104,16 +101,19 @@ public class ObjectManipulator : MonoBehaviour {
                         m_YVector = -360;
                     }
                     m_YVector += Mathf.Abs(m_TmpVector.y);
-                    Debug.Log("Vector (Positive): " + m_XVector);
+
+                    /*Debug.Log("Vector (Positive): " + m_XVector);
                     m_TargetRotation *= Quaternion.AngleAxis(m_YVector * 5, Vector3.up);
                     ModelManager.Instance.GetCurrentModel().transform.rotation = Quaternion.Lerp(
                         ModelManager.Instance.GetCurrentModel().transform.rotation,
                         m_TargetRotation, 25 * m_RotationSmoothing * Time.deltaTime
-                    );
+                    );*/
                 }
-            }*/
 
-            //m_PrevVector = m_Controller.GetTouchpadAxis();
+            }
+            ModelManager.Instance.GetCurrentModel().transform.eulerAngles = new Vector3(0, m_XVector, m_YVector);
+
+            m_PrevVector = m_Controller.GetTouchpadAxis();
         }
     }
 }
