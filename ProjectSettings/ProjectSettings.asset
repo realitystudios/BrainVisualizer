@@ -245,8 +245,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/Thoma/Google Drive/Projects/BrainViz.keystore
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/Thoma/Google Drive/Projects/RealityStudios.keystore
+  AndroidKeyaliasName: alpha
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
