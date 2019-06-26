@@ -73,7 +73,42 @@ ModelImporter:
     4300020: Occipital lobe right
     4300022: Occipital lobe left
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red
+    second: {fileID: 2100000, guid: d45a4ccc90e44ac45bea109bd732af4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dark yellow
+    second: {fileID: 2100000, guid: e851e43a83e2cb4439229f56cf5d90ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_0
+    second: {fileID: 2100000, guid: 31b8708a31416e440acf4bc347fe7fb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pink
+    second: {fileID: 2100000, guid: ee8ead352a6834e46bac90de87a8a811, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: purple
+    second: {fileID: 2100000, guid: b731022ec5edba64292113c1c6913cb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: royal blue
+    second: {fileID: 2100000, guid: f533f97d1b29ec34baf4c929046f6f27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: saddlebrown
+    second: {fileID: 2100000, guid: cc6882453159a07459776ecf2d313871, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
