@@ -1,0 +1,70 @@
+image: "gableroux/unity3d:2018.2.21f1-android"
+
+stages:
+- test
+- build
+- deploy
+
+variables:
+  BUILD_NAME: BrainVisualizer
+
+.unity_before_script: &unity_before_script
+  before_script:
+  - chmod +x ./ci/before_script.sh && ./ci/before_script.sh
+
+.test: &test
+  stage: test
+  <<: *unity_before_script
+  script:
+  - chmod +x ./ci/test.sh && ./ci/test.sh
+  artifacts:
+    paths:
+    - $(pwd)/$TEST_PLATFORM-results.xml
+
+test-editmode:
+  <<: *test
+  variables:
+    TEST_PLATFORM: editmode
+
+test-playmode:
+  <<: *test
+  variables:
+    TEST_PLATFORM: playmode
+
+.build: &build
+  stage: build
+  #tip: you can reuse same stage to do everything in parallel and reduce overall time
+  # stage: test
+  <<: *unity_before_script
+  script:
+  - chmod +x ./ci/build.sh && ./ci/build.sh
+
+  artifacts:
+    paths:
+    - ./Builds/
+
+build-android:
+  <<: *build
+  variables:
+    BUILD_TARGET: Android
+
+.generate-android-apk: &generate-apk
+  stage: deploy
+  script: |
+    cd ./Builds
+    cd ./$BUILD_TARGET
+    cd ./$BUILD_NAME
+    ls -ahl
+    gradle assembleRelease
+    ls -ahl
+    find . -name '*.apk'
+    ls -ahl build/outputs/apk/
+# retry because sometimes checkingout artifacts fails
+  retry: 2
+  artifacts:
+    name: "$BUILD_NAME $CI_PIPELINE_IID $BUILD_TARGET"
+    paths:
+      - ./Builds/$BUILD_TARGET/$BUILD_NAME/$BUILD_NAME/build/outputs/apk/release/$BUILD_NAME-release.apk
+    expire_in: 1 day
+  variables:
+    BUILD_TARGET: Android
