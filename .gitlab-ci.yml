@@ -1,4 +1,4 @@
-image: "gableroux/unity3d:2018.2.21f1-android"
+image: "gableroux/unity3d:2018.4.12f1-android"
 
 stages:
 - test
@@ -7,14 +7,32 @@ stages:
 
 variables:
   BUILD_NAME: BrainVisualizer
+  UNITY_ACTIVATION_FILE: ./unity3d.alf
 
 .unity_before_script: &unity_before_script
   before_script:
   - chmod +x ./ci/before_script.sh && ./ci/before_script.sh
 
+.cache: &cache
+  cache:
+    key: "$CI_PROJECT_NAMESPACE-$CI_PROJECT_NAME-$CI_COMMIT_REF_SLUG-$TEST_PLATFORM"
+    paths:
+      - Library/
+
+get-activation-file:
+  when: manual
+  stage: .pre
+  script:
+    - chmod +x ./ci/get_activation_file.sh && ./ci/get_activation_file.sh
+  artifacts:
+    paths:
+      - $UNITY_ACTIVATION_FILE
+    expire_in: 10 min
+
 .test: &test
   stage: test
   <<: *unity_before_script
+  <<: *cache
   script:
   - chmod +x ./ci/test.sh && ./ci/test.sh
   artifacts:
@@ -36,15 +54,16 @@ test-playmode:
   #tip: you can reuse same stage to do everything in parallel and reduce overall time
   # stage: test
   <<: *unity_before_script
+  <<: *cache
   script:
   - chmod +x ./ci/build.sh && ./ci/build.sh
-
   artifacts:
     paths:
     - ./Builds/
 
 build-android:
   <<: *build
+  image: gableroux/unity3d:2018.4.12f1-android
   variables:
     BUILD_TARGET: Android
 
@@ -58,13 +77,13 @@ build-android:
     gradle assembleRelease
     ls -ahl
     find . -name '*.apk'
-    ls -ahl build/outputs/apk/
+    ls -ahl build/
 # retry because sometimes checkingout artifacts fails
   retry: 2
   artifacts:
     name: "$BUILD_NAME $CI_PIPELINE_IID $BUILD_TARGET"
     paths:
-      - ./Builds/$BUILD_TARGET/$BUILD_NAME/$BUILD_NAME/build/outputs/apk/release/$BUILD_NAME-release.apk
+      - ./Builds/$BUILD_TARGET/$BUILD_NAME/build/release/$BUILD_NAME-release.apk
     expire_in: 1 day
   variables:
     BUILD_TARGET: Android
