@@ -28,6 +28,8 @@ get-activation-file:
     paths:
       - $UNITY_ACTIVATION_FILE
     expire_in: 10 min
+  only:
+  - master
 
 .test: &test
   stage: test
@@ -38,6 +40,8 @@ get-activation-file:
   artifacts:
     paths:
     - $(pwd)/$TEST_PLATFORM-results.xml
+  only:
+  - merge_request
 
 test-editmode:
   <<: *test
@@ -60,30 +64,11 @@ test-playmode:
   artifacts:
     paths:
     - ./Builds/
+  only:
+  - master
 
 build-android:
   <<: *build
   image: gableroux/unity3d:2018.4.12f1-android
-  variables:
-    BUILD_TARGET: Android
-
-.generate-android-apk: &generate-apk
-  stage: deploy
-  script: |
-    cd ./Builds
-    cd ./$BUILD_TARGET
-    cd ./$BUILD_NAME
-    ls -ahl
-    gradle assembleRelease
-    ls -ahl
-    find . -name '*.apk'
-    ls -ahl build/
-# retry because sometimes checkingout artifacts fails
-  retry: 2
-  artifacts:
-    name: "$BUILD_NAME $CI_PIPELINE_IID $BUILD_TARGET"
-    paths:
-      - ./Builds/$BUILD_TARGET/$BUILD_NAME/build/release/$BUILD_NAME-release.apk
-    expire_in: 1 day
   variables:
     BUILD_TARGET: Android
