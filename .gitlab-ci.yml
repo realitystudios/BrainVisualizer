@@ -65,7 +65,8 @@ test-playmode:
     paths:
     - ./Builds/
   only:
-  - master
+  - Quest-Build
+  - Go-Build
 
 build-android:
   <<: *build
