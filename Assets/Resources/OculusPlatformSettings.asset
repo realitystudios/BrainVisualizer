@@ -4,14 +4,15 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3d881e962d099f4a8eb492ef7e9a8c0, type: 3}
   m_Name: OculusPlatformSettings
   m_EditorClassIdentifier: 
-  ovrAppID: 
-  ovrMobileAppID: 2089488387803211
+  ovrAppID: 2300216600021350
+  ovrMobileAppID: 2300216600021350
   ovrUseStandalonePlatform: 0
   ovrEnableARM64Support: 0

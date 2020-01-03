@@ -155,9 +155,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 15603937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a49e42f8d38331645921314b4441590c, type: 3}
+  m_Script: {fileID: 11500000, guid: e13140b5aff885c4bbeab48705f784ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ModelPrefabs:
+  - {fileID: 1429985415019220, guid: 402c362ea64b0c4469249eb9809a153d, type: 3}
+  - {fileID: 1514515813448578, guid: ffe640b7702a0cc4f82a01d97ca3152d, type: 3}
 --- !u!1 &55826529
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +817,77 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133748937}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &147539023
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1132088888}
+    m_Modifications:
+    - target: {fileID: 158226, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_Name
+      value: LocalAvatar
+      objectReference: {fileID: 0}
+    - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: ShowThirdPerson
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: ShowFirstPerson
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+--- !u!4 &147539024 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293,
+    type: 3}
+  m_PrefabInstance: {fileID: 147539023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,22 +1294,22 @@ MonoBehaviour:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem
     typeName: VRTK.SDK_OculusSystem
-    descriptionIndex: 1
+    descriptionIndex: 0
   cachedBoundariesSDKInfo:
     baseTypeName: VRTK.SDK_BaseBoundaries
     fallbackTypeName: VRTK.SDK_FallbackBoundaries
     typeName: VRTK.SDK_OculusBoundaries
-    descriptionIndex: 1
+    descriptionIndex: 0
   cachedHeadsetSDKInfo:
     baseTypeName: VRTK.SDK_BaseHeadset
     fallbackTypeName: VRTK.SDK_FallbackHeadset
     typeName: VRTK.SDK_OculusHeadset
-    descriptionIndex: 1
+    descriptionIndex: 0
   cachedControllerSDKInfo:
     baseTypeName: VRTK.SDK_BaseController
     fallbackTypeName: VRTK.SDK_FallbackController
     typeName: VRTK.SDK_OculusController
-    descriptionIndex: 1
+    descriptionIndex: 0
 --- !u!1 &286675991
 GameObject:
   m_ObjectHideFlags: 0
@@ -4750,26 +4824,31 @@ PrefabInstance:
     - target: {fileID: 2533412977769927560, guid: 333966f634d2ec944b41c05ee6386737,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 2533412977769927560, guid: 333966f634d2ec944b41c05ee6386737,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2533412977769927560, guid: 333966f634d2ec944b41c05ee6386737,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2533412977769927560, guid: 333966f634d2ec944b41c05ee6386737,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 2533412977769927560, guid: 333966f634d2ec944b41c05ee6386737,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533412977769927560, guid: 333966f634d2ec944b41c05ee6386737,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4445556919726410565, guid: 333966f634d2ec944b41c05ee6386737,
@@ -4930,7 +5009,7 @@ PrefabInstance:
     - target: {fileID: 9118427473205797976, guid: 333966f634d2ec944b41c05ee6386737,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9118427473205797976, guid: 333966f634d2ec944b41c05ee6386737,
         type: 3}
@@ -4940,27 +5019,27 @@ PrefabInstance:
     - target: {fileID: 9118427473205797976, guid: 333966f634d2ec944b41c05ee6386737,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9118427473205797976, guid: 333966f634d2ec944b41c05ee6386737,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 9118427473205797976, guid: 333966f634d2ec944b41c05ee6386737,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -3.29
       objectReference: {fileID: 0}
     - target: {fileID: 9118427473205797976, guid: 333966f634d2ec944b41c05ee6386737,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 9118427473205797976, guid: 333966f634d2ec944b41c05ee6386737,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 1.8199999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 333966f634d2ec944b41c05ee6386737, type: 3}
@@ -5402,6 +5481,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 220180589}
+  - {fileID: 147539024}
   m_Father: {fileID: 278065535}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5473,7 +5553,7 @@ MonoBehaviour:
   activeScriptingDefineSymbolsWithoutSDKClasses: []
   scriptAliasLeftController: {fileID: 2031752823}
   scriptAliasRightController: {fileID: 529922595}
-  autoManageVRSettings: 1
+  autoManageVRSettings: 0
   autoLoadSetup: 1
   setups:
   - {fileID: 278065536}
