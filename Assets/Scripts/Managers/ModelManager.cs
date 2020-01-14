@@ -7,6 +7,7 @@ public class ModelManager : MonoBehaviour {
 
     [SerializeField]
     private List<GameObject> m_ModelPrefabs;
+
     private GameObject m_CurrentModel;
     private int m_CurrentModelIndex = 0;
 
@@ -22,7 +23,7 @@ public class ModelManager : MonoBehaviour {
         Instance = this;
         for (int i = 0; i < transform.childCount; i++)
         {
-            DestroyImmediate(transform.GetChild(i).gameObject);
+            Destroy(transform.GetChild(i).gameObject);
         }
 
         LoadModel(0);
@@ -43,7 +44,7 @@ public class ModelManager : MonoBehaviour {
     {
         if (m_CurrentModel != null)
         {
-            DestroyImmediate(m_CurrentModel);
+            Destroy(m_CurrentModel);
         }
 
         m_CurrentModelIndex = modelId;
