@@ -30,33 +30,30 @@ public class DebugUIBuilder : MonoBehaviour
   public const int DEBUG_PANE_LEFT = 2;
 
   [SerializeField]
-  private RectTransform buttonPrefab;
+  private RectTransform buttonPrefab = null;
   [SerializeField]
-  private RectTransform labelPrefab;
+  private RectTransform labelPrefab = null;
   [SerializeField]
-  private RectTransform sliderPrefab;
+  private RectTransform sliderPrefab = null;
   [SerializeField]
-  private RectTransform dividerPrefab;
+  private RectTransform dividerPrefab = null;
   [SerializeField]
-  private RectTransform togglePrefab;
+  private RectTransform togglePrefab = null;
   [SerializeField]
-  private RectTransform radioPrefab;
+  private RectTransform radioPrefab = null;
 
   [SerializeField]
-  private GameObject uiHelpersToInstantiate;
+  private GameObject uiHelpersToInstantiate = null;
 
   [SerializeField]
-  private Transform[] targetContentPanels;
-
-  [SerializeField]
-  private bool manuallyResizeContentPanels;
+  private Transform[] targetContentPanels = null;
 
   private bool[] reEnable;
 
   [SerializeField]
-  private List<GameObject> toEnable;
+  private List<GameObject> toEnable = null;
   [SerializeField]
-  private List<GameObject> toDisable;
+  private List<GameObject> toDisable = null;
 
   public static DebugUIBuilder instance;
 
@@ -206,13 +203,6 @@ public class DebugUIBuilder : MonoBehaviour
       }
       canvasRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, maxWidth);
       canvasRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, -y + marginV);
-
-      //r.anchoredPosition = insertPositions[targetCanvas]; // - Vector2.up * r.rect.height / 2;
-      //insertPositions[targetCanvas].y -= r.rect.height + elementSpacing;
-      //targetContentPanels[targetCanvas].GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, -insertPositions[targetCanvas].y);
-
-      //canvasRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, Mathf.Max(canvasRect.rect.width, r.rect.width+2*marginH));
-      //canvasRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, Mathf.Max(canvasRect.rect.height, insertPositions[targetCanvas].y)+marginV-elementSpacing);
     }
   }
 
@@ -225,15 +215,6 @@ public class DebugUIBuilder : MonoBehaviour
     }
 
     r.transform.SetParent(targetContentPanels[targetCanvas], false);
-    /*
-    r.anchoredPosition = insertPositions[targetCanvas]; // - Vector2.up * r.rect.height / 2;
-        insertPositions[targetCanvas].y -= r.rect.height + elementSpacing;
-        //targetContentPanels[targetCanvas].GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, -insertPositions[targetCanvas].y);
-
-    RectTransform canvasRect = targetContentPanels[targetCanvas].GetComponent<RectTransform>();
-    canvasRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, Mathf.Max(canvasRect.rect.width, r.rect.width+2*marginH));
-    canvasRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, Mathf.Max(canvasRect.rect.height, insertPositions[targetCanvas].y)+marginV-elementSpacing);
-    */
     insertedElements[targetCanvas].Add(r);
     if (gameObject.activeInHierarchy)
     {
@@ -241,8 +222,6 @@ public class DebugUIBuilder : MonoBehaviour
     }
   }
 
-  // optional update method for all of them, we'll iterate through in our update fn
-  // more useful params: radio ID; panel; status refresh fn; 
   public RectTransform AddButton(string label, OnClick handler, int targetCanvas = 0)
   {
     RectTransform buttonRT = GameObject.Instantiate(buttonPrefab).GetComponent<RectTransform>();

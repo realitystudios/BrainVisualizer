@@ -53,7 +53,6 @@ namespace OculusSampleFramework
         /// <summary>
         /// Toggle references
         /// </summary>
-        Toggle overlayRadioButton;
         Toggle applicationRadioButton;
         Toggle noneRadioButton;
         
@@ -91,10 +90,8 @@ namespace OculusSampleFramework
         public Texture compositorLabelTexture;
 
         /// <summary>
-        /// Indicate current ui display type
+        /// The resources & settings needed for the level loading simulation demo
         /// </summary>
-        EUiDisplayType desiredUiType = EUiDisplayType.EUDT_OverlayQuad;
-
         [Header("Level Loading Sim Settings")]
         public GameObject prefabForLevelLoadSim;
         public OVROverlay cubemapOverlay;
@@ -104,8 +101,8 @@ namespace OculusSampleFramework
         public float heightBetweenItems;
         public int numObjectsPerLevel;
         public int numLevels;
+        public int numLoopsTrigger = 500000000;
         List<GameObject> spawnedCubes = new List<GameObject>();
-        const int NumLoopsTrigger = 500000000;
 
         #region MonoBehaviour handler
 
@@ -118,32 +115,16 @@ namespace OculusSampleFramework
             DebugUIBuilder.instance.AddButton("Destroy Cubes", TriggerUnload);
             DebugUIBuilder.instance.AddDivider();
             DebugUIBuilder.instance.AddLabel("OVROverlay vs. Application Render Comparison");
-            overlayRadioButton = DebugUIBuilder.instance.AddRadio("OVROverlay", "group", delegate (Toggle t) { RadioPressed(ovrOverlayID, "group", t); }).GetComponentInChildren<Toggle>();
+            DebugUIBuilder.instance.AddRadio("OVROverlay", "group", delegate (Toggle t) { RadioPressed(ovrOverlayID, "group", t); }).GetComponentInChildren<Toggle>();
             applicationRadioButton = DebugUIBuilder.instance.AddRadio("Application", "group", delegate (Toggle t) { RadioPressed(applicationID, "group", t); }).GetComponentInChildren<Toggle>();
             noneRadioButton = DebugUIBuilder.instance.AddRadio("None", "group", delegate (Toggle t) { RadioPressed(noneID, "group", t); }).GetComponentInChildren<Toggle>();
         
             DebugUIBuilder.instance.Show();
 
             // Start with Overlay Quad
-            desiredUiType = EUiDisplayType.EUDT_OverlayQuad;
             CameraAndRenderTargetSetup();
             cameraRenderOverlay.enabled = true;
             cameraRenderOverlay.currentOverlayShape = OVROverlay.OverlayShape.Quad;
-
-            /*
-            switch(desiredUiType)
-            {
-                case EUiDisplayType.EUDT_OverlayQuad:
-                    ActivateOVROverlay();
-                    break;
-                case EUiDisplayType.EUDT_WorldGeoQuad:
-                    ActivateWorldGeo();
-                    break;
-                case EUiDisplayType.EUDT_None:
-                    ActivateNone();
-                    break;
-            }
-            */
             spawnedCubes.Capacity = numObjectsPerLevel * numLevels;
         }
 
@@ -157,38 +138,7 @@ namespace OculusSampleFramework
                 inMenu = !inMenu;
             }
 
-            if(Input.GetKeyDown(KeyCode.S))
-            {
-                if(desiredUiType == EUiDisplayType.EUDT_None)
-                {
-                    desiredUiType = EUiDisplayType.EUDT_WorldGeoQuad;
-                }
-                else if(desiredUiType == EUiDisplayType.EUDT_OverlayQuad)
-                {
-                    desiredUiType = EUiDisplayType.EUDT_None;
-                }
-                else
-                {
-                    desiredUiType = EUiDisplayType.EUDT_WorldGeoQuad;
-                }
-                switch(desiredUiType)
-                {
-                    case EUiDisplayType.EUDT_OverlayQuad:
-                        //ActivateOVROverlay();
-                        overlayRadioButton.isOn = true;
-                        break;
-                    case EUiDisplayType.EUDT_WorldGeoQuad:
-                        applicationRadioButton.isOn = true;
-                        //ActivateWorldGeo();
-                        break;
-                    case EUiDisplayType.EUDT_None:
-                        noneRadioButton.isOn = true;
-                        //ActivateNone();
-                        break;
-                }
-                Debug.Log("Desired ui type = " + desiredUiType);
-            }
-
+            // Trigger loading simulator via keyboard
             if (Input.GetKeyDown(KeyCode.A))
             {
                 TriggerLoad();
@@ -197,6 +147,10 @@ namespace OculusSampleFramework
         #endregion
 
         #region Private Functions
+        
+        /// <summary>
+        /// Usage: Activate the world geometry and deactivate OVROverlay display
+        /// </summary>
         void ActivateWorldGeo()
         {
             worldspaceGeoParent.SetActive(true);
@@ -205,11 +159,12 @@ namespace OculusSampleFramework
             cameraRenderOverlay.enabled = false;
             renderingLabelOverlay.enabled = true;
             renderingLabelOverlay.textures[0] = applicationLabelTexture;
-            desiredUiType = EUiDisplayType.EUDT_WorldGeoQuad;
             Debug.Log("Switched to ActivateWorldGeo");
-            //applicationRadioButton.isOn = true;
         }
 
+        /// <summary>
+        /// Usage: Activate OVROverlay display and deactivate the world geometry
+        /// </summary>
         void ActivateOVROverlay()
         {
             worldspaceGeoParent.SetActive(false);
@@ -218,11 +173,12 @@ namespace OculusSampleFramework
             uiGeoParent.SetActive(true);
             renderingLabelOverlay.enabled = true;
             renderingLabelOverlay.textures[0] = compositorLabelTexture;
-            desiredUiType = EUiDisplayType.EUDT_OverlayQuad;
             Debug.Log("Switched to ActivateOVROVerlay");
-            //overlayRadioButton.isOn = true;
         }
 
+        /// <summary>
+        /// Usage: Deactivate both world geometry and OVROverlay display
+        /// </summary>
         void ActivateNone()
         {
             worldspaceGeoParent.SetActive(false);
@@ -230,24 +186,18 @@ namespace OculusSampleFramework
             cameraRenderOverlay.enabled = false;
             uiGeoParent.SetActive(false);
             renderingLabelOverlay.enabled = false;
-            desiredUiType = EUiDisplayType.EUDT_None;
             Debug.Log("Switched to ActivateNone");
-            //noneRadioButton.isOn = true;
         }
 
-        // This function is to simulate a level load event in Unity
-        // The idea is to enable a cubemap overlay right before any action that will stall the main thread
-        // This cubemap overlay can be combined with other OVROverlay objects, such as animated textures to indicate "Loading..."
+
+        /// <summary>
+        /// This function is to simulate a level load event in Unity
+        /// The idea is to enable a cubemap overlay right before any action that will stall the main thread
+        /// This cubemap overlay can be combined with other OVROverlay objects, such as animated textures to indicate "Loading..."
+        /// </summary>
         void TriggerLoad()
         {
             StartCoroutine(WaitforOVROverlay());
-        }
-
-        void TriggerUnload()
-        {
-            ClearObjects();
-            //ActivateWorldGeo();
-            applicationRadioButton.isOn = true;
         }
 
         IEnumerator WaitforOVROverlay()
@@ -259,7 +209,6 @@ namespace OculusSampleFramework
             uiTextOverlayTrasnform.position = newPos;
             cubemapOverlay.enabled = true;
             loadingTextQuadOverlay.enabled = true;
-            //ActivateNone();
             noneRadioButton.isOn = true;
             yield return new WaitForSeconds(0.1f);
             ClearObjects();
@@ -269,6 +218,15 @@ namespace OculusSampleFramework
             yield return null;
         }
 
+
+        /// <summary>
+        /// Usage: Destroy all loaded resources and switch back to world geometry rendering mode.
+        /// </summary>
+        void TriggerUnload()
+        {
+            ClearObjects();
+            applicationRadioButton.isOn = true;
+        }
 
         /// <summary>
         /// Usage: Recreate UI render target according overlay type and overlay size
@@ -342,10 +300,14 @@ namespace OculusSampleFramework
             cameraRenderOverlay.textures[0] = overlayRT;
         }
 
+
+        /// <summary>
+        /// Usage: block main thread with an empty for loop and generate a bunch of cubes around the player.
+        /// </summary>
         void SimulateLevelLoad()
         {
             int numToPrint = 0;
-            for (int p = 0; p < NumLoopsTrigger; p++)
+            for (int p = 0; p < numLoopsTrigger; p++)
             {
                 numToPrint++;
             }
@@ -372,6 +334,10 @@ namespace OculusSampleFramework
             }
         }
 
+
+        /// <summary>
+        /// Usage: destroy all created cubes and garbage collect.
+        /// </summary>
         void ClearObjects()
         {
             for (int i = 0; i < spawnedCubes.Count; i++)
@@ -384,6 +350,10 @@ namespace OculusSampleFramework
         #endregion
 
         #region Debug UI Handlers
+
+        /// <summary>
+        /// Usage: radio button handler.
+        /// </summary>
         public void RadioPressed(string radioLabel, string group, Toggle t)
         {
             if (string.Compare(radioLabel, ovrOverlayID) == 0)
