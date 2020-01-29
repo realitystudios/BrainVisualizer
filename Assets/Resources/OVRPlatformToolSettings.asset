@@ -15,7 +15,7 @@ MonoBehaviour:
   appIDs:
   - 
   - 
-  - 
+  - 2089488387803211
   releaseNotes:
   - 
   - 
@@ -23,7 +23,7 @@ MonoBehaviour:
   releaseChannels:
   - 
   - 
-  - 
+  - ALPHA
   riftBuildDiretory: 
   riftBuildVersion: 
   riftLaunchFile: 
@@ -37,7 +37,7 @@ MonoBehaviour:
   apkBuildPaths:
   - 
   - 
-  - 
+  - D:/Development/Reality Studios/BrainVisualizer/Build/BrainViz-Quest.apk
   obbFilePaths:
   - 
   - 
@@ -50,5 +50,5 @@ MonoBehaviour:
   - configList: []
   - configList: []
   - configList: []
-  targetPlatform: 3
+  targetPlatform: 2
   runOvrLint: 1

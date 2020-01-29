@@ -47,7 +47,7 @@ PlayerSettings:
   defaultScreenHeight: 768
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
-  m_StereoRenderingPath: 0
+  m_StereoRenderingPath: 2
   m_ActiveColorSpace: 0
   m_MTRendering: 1
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000
@@ -143,7 +143,7 @@ PlayerSettings:
       depthBufferSharingEnabled: 0
     oculus:
       sharedDepthBuffer: 1
-      dashSupport: 0
+      dashSupport: 1
       lowOverheadMode: 0
       protectedContext: 0
       v2Signing: 1
