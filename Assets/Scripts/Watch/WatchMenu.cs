@@ -5,36 +5,29 @@ using UnityEngine;
 public class WatchMenu : MonoBehaviour
 {
     [SerializeField]
-    private List<WatchMenuItem> m_MenuItems;
+    private GameObject m_ModelMenu;
 
-    private int m_CurrentItemIndex = 0;
+    private bool m_ModelMenuActive;
 
     private void Start()
     {
-        foreach(WatchMenuItem menuItem in m_MenuItems)
-        {
-            menuItem.OnItemSelected += UpdateMenu;
-        }
-    }
-
-    private void UpdateMenu(WatchMenuItem menuItem)
-    {
-        m_CurrentItemIndex = m_MenuItems.IndexOf(menuItem);
-
-        foreach(WatchMenuItem item in m_MenuItems)
-        {
-            if (item.Equals(menuItem))
-            {
-                menuItem.Select();
-            } else
-            {
-                menuItem.Deselect();
-            }
-        }
+        m_ModelMenuActive = m_ModelMenu.activeSelf;
     }
 
     private void Update()
     {
+        transform.LookAt(VRTK.VRTK_DeviceFinder.HeadsetTransform());
+    }
 
+    public void ToggleModelMenu()
+    {
+        m_ModelMenu.SetActive(m_ModelMenuActive);
+
+        m_ModelMenuActive = !m_ModelMenuActive;
+    }
+
+    public void ExitApplication()
+    {
+        Application.Quit(0);
     }
 }
