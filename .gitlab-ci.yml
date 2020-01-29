@@ -19,6 +19,9 @@ variables:
     paths:
       - Library/
 
+.test_conversion: &test_conversion
+  - java -classpath ./ci Stylizer ./ci/nunit3-junit.xslt $(pwd)/$TEST_PLATFORM-results.xml $(pwd)/$TEST_PLATFORM-results-converted.xml
+
 get-activation-file:
   when: manual
   stage: .pre
@@ -37,9 +40,13 @@ get-activation-file:
   <<: *cache
   script:
   - chmod +x ./ci/test.sh && ./ci/test.sh
+  after_script:
+    - *test_conversion
   artifacts:
     paths:
-    - $(pwd)/$TEST_PLATFORM-results.xml
+    - $(pwd)/$TEST_PLATFORM-results-converted.xml
+    reports:
+      junit: $(pwd)/$TEST_PLATFORM-results-converted.xml
   only:
   - merge_request
 
