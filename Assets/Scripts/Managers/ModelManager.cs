@@ -11,6 +11,8 @@ public class ModelManager : MonoBehaviour {
     private GameObject m_CurrentModel;
     private int m_CurrentModelIndex = 0;
 
+    public List<GameObject> Models { get { return m_ModelPrefabs; } set { m_ModelPrefabs = value; } }
+
     public static ModelManager Instance { get; private set; }
 
     private void Awake()
@@ -26,7 +28,15 @@ public class ModelManager : MonoBehaviour {
             Destroy(transform.GetChild(i).gameObject);
         }
 
-        LoadModel(0);
+        if (m_ModelPrefabs == null)
+        {
+            m_ModelPrefabs = new List<GameObject>();
+        }
+
+        if (m_ModelPrefabs != null && m_ModelPrefabs.Count > 0)
+        {
+            LoadModel(0);
+        }
     }
 
     public GameObject GetCurrentModel()
@@ -49,5 +59,6 @@ public class ModelManager : MonoBehaviour {
 
         m_CurrentModelIndex = modelId;
         m_CurrentModel = Instantiate(m_ModelPrefabs[m_CurrentModelIndex], transform);
+        m_CurrentModel.name = m_ModelPrefabs[m_CurrentModelIndex].name;
     }
 }

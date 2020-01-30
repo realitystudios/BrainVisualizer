@@ -20,7 +20,7 @@ variables:
       - Library/
 
 .test_conversion: &test_conversion
-  - xsltproc ./ci/nunit3-junit.xslt $(pwd)/$TEST_PLATFORM-results.xml $(pwd)/$TEST_PLATFORM-results-converted.xml
+  - saxonb-xslt -s $(pwd)/$TEST_PLATFORM-results.xml -xsl ./ci/nunit3-junit.xslt -o $(pwd)/$TEST_PLATFORM-results-converted.xml
 
 get-activation-file:
   when: manual
@@ -44,6 +44,7 @@ get-activation-file:
     - *test_conversion
   artifacts:
     paths:
+    - $(pwd)/$TEST_PLATFORM-results.xml
     - $(pwd)/$TEST_PLATFORM-results-converted.xml
     reports:
       junit: $(pwd)/$TEST_PLATFORM-results-converted.xml
