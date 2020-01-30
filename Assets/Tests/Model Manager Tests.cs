@@ -41,16 +41,6 @@ namespace Tests
             Assert.That(m_ModelManager.GetCurrentModel().name, Does.Contain(m_ModelManager.Models[0].name));
         }
 
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
-        [UnityTest]
-        public IEnumerator ModelManagerTestsWithEnumeratorPasses()
-        {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
-        }
-
         [TearDown]
         public void ModelManager_TearDown()
         {
