@@ -1,4 +1,4 @@
-image: "gableroux/unity3d:2018.4.12f1-android"
+image: "twday/unity3d:2018.4.12f1-android"
 
 stages:
 - test
@@ -20,7 +20,7 @@ variables:
       - Library/
 
 .test_conversion: &test_conversion
-  - java -classpath ./ci Stylizer ./ci/nunit3-junit.xslt $(pwd)/$TEST_PLATFORM-results.xml $(pwd)/$TEST_PLATFORM-results-converted.xml
+  - xsltproc ./ci/nunit3-junit.xslt $(pwd)/$TEST_PLATFORM-results.xml $(pwd)/$TEST_PLATFORM-results-converted.xml
 
 get-activation-file:
   when: manual
@@ -49,6 +49,7 @@ get-activation-file:
       junit: $(pwd)/$TEST_PLATFORM-results-converted.xml
   only:
   - merge_request
+  - master
 
 test-editmode:
   <<: *test
@@ -77,6 +78,5 @@ test-playmode:
 
 build-android:
   <<: *build
-  image: gableroux/unity3d:2018.4.12f1-android
   variables:
     BUILD_TARGET: Android
