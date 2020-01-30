@@ -4,8 +4,7 @@ using System.Collections;
 
 public class EditModeExampleTests
 {
-
-	[Test]
+	/*[Test]
 	public void EditModeExampleTestSimplePasses ()
 	{
 		// Use the Assert class to test conditions.
@@ -21,5 +20,5 @@ public class EditModeExampleTests
 		// yield to skip a frame
 		Assert.True(true);
 		yield return null;
-	}
+	}*/
 }

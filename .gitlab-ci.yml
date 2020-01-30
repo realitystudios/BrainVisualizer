@@ -28,8 +28,6 @@ get-activation-file:
     paths:
       - $UNITY_ACTIVATION_FILE
     expire_in: 10 min
-  only:
-  - master
 
 .test: &test
   stage: test
@@ -40,6 +38,9 @@ get-activation-file:
   artifacts:
     paths:
     - $(pwd)/$TEST_PLATFORM-results.xml
+    - $(pwd)/$TEST_PLATFORM-results-converted.xml
+    reports:
+      junit: $(pwd)/$TEST_PLATFORM-results-converted.xml
   only:
   - merge_request
   - master
@@ -56,8 +57,6 @@ test-playmode:
 
 .build: &build
   stage: build
-  #tip: you can reuse same stage to do everything in parallel and reduce overall time
-  # stage: test
   <<: *unity_before_script
   <<: *cache
   script:
@@ -66,8 +65,7 @@ test-playmode:
     paths:
     - ./Builds/
   only:
-  - Quest-Build
-  - Go-Build
+    - master
 
 build-android:
   <<: *build
