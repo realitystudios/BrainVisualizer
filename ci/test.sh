@@ -25,4 +25,7 @@ else
 fi
 
 cat $(pwd)/$TEST_PLATFORM-results.xml | grep test-run | grep Passed
+
+saxonb-xslt -s:$(pwd)/$TEST_PLATFORM-results.xml -xsl:./ci/nunit3-junit.xslt -o:$(pwd)/$TEST_PLATFORM-results-converted.xml
+
 exit $UNITY_TEST_EXIT_CODE
