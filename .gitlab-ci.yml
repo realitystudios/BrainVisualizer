@@ -1,4 +1,4 @@
-image: "twday/unity3d:2018.4.12f1-android"
+image: "twday/unity3d:2019.2.17f1-android"
 
 stages:
 - test
@@ -19,9 +19,6 @@ variables:
     paths:
       - Library/
 
-.test_conversion: &test_conversion
-  - saxonb-xslt -s $(pwd)/$TEST_PLATFORM-results.xml -xsl ./ci/nunit3-junit.xslt -o $(pwd)/$TEST_PLATFORM-results-converted.xml
-
 get-activation-file:
   when: manual
   stage: .pre
@@ -40,14 +37,9 @@ get-activation-file:
   <<: *cache
   script:
   - chmod +x ./ci/test.sh && ./ci/test.sh
-  after_script:
-    - *test_conversion
   artifacts:
     paths:
     - $(pwd)/$TEST_PLATFORM-results.xml
-    - $(pwd)/$TEST_PLATFORM-results-converted.xml
-    reports:
-      junit: $(pwd)/$TEST_PLATFORM-results-converted.xml
   only:
   - merge_request
   - master
