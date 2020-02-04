@@ -1,4 +1,4 @@
-image: "twday/unity3d:2019.2.17f1-android"
+image: "realitystudios/unity3d:2019.2.17f1-android"
 
 stages:
 - test
