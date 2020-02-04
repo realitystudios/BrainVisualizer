@@ -37,7 +37,7 @@ The following packages were updated:
 >>>>>>> e3322d3... Updated CI Process
 =======
 
-=== Mon Feb  3 16:54:06 2020
+=== Tue Feb  4 14:13:37 2020
 
 Packages were changed.
 Update Mode: updateDependencies
@@ -60,6 +60,7 @@ The following packages were updated:
   com.unity.package-manager-ui from version 2.0.8 to 2.2.0
   com.unity.purchasing from version 2.0.3 to 2.0.6
   com.unity.textmeshpro from version 1.4.1 to 2.0.1
+<<<<<<< HEAD
 
 === Tue Feb  4 10:47:17 2020
 
@@ -94,3 +95,5 @@ The following packages were removed:
   com.unity.xr.oculus.android@1.38.6
   com.unity.xr.oculus.standalone@1.38.4
 >>>>>>> c227032... Updated Test Conversion
+=======
+>>>>>>> bb3b7be... Updated CI
