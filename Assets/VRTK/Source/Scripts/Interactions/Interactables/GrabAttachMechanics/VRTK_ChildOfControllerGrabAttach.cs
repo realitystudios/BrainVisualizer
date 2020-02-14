@@ -32,7 +32,11 @@ namespace VRTK.GrabAttachMechanics
             if (base.StartGrab(grabbingObject, givenGrabbedObject, givenControllerAttachPoint))
             {
                 SnapObjectToGrabToController(givenGrabbedObject);
+                Debug.Log(givenGrabbedObject);
+                Debug.Log(grabbedObject);
+                Debug.Log(grabbedObjectScript);
                 grabbedObjectScript.isKinematic = true;
+                Debug.Log(grabbedObjectScript.isKinematic);
                 return true;
             }
             return false;

@@ -6,7 +6,6 @@ using VRTK;
 [RequireComponent(typeof(AudioSource))]
 public class ObjectDescriptor : MonoBehaviour {
 
-
     [Header("Object Information")]
     [SerializeField]
     private string m_ObjectName;
@@ -25,7 +24,7 @@ public class ObjectDescriptor : MonoBehaviour {
 
     private ObjectTooltip m_CurrentTooltip;
 
-    protected void OnEnable()
+    private void OnEnable()
     {
         if (GetComponent<VRTK_InteractableObject>() != null)
         {
@@ -34,7 +33,7 @@ public class ObjectDescriptor : MonoBehaviour {
         }
     }
 
-    protected virtual void OnDisable()
+    private void OnDisable()
     {
         if (GetComponent<VRTK_InteractableObject>() != null)
         {
@@ -43,7 +42,7 @@ public class ObjectDescriptor : MonoBehaviour {
         }
     }
 
-    protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
+    private void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
         if (m_CurrentTooltip == null)
         {
@@ -55,7 +54,7 @@ public class ObjectDescriptor : MonoBehaviour {
         }
     }
 
-    protected virtual void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
+    private void InteractableObjectUnused(object sender, InteractableObjectEventArgs e)
     {
         HideDescription();
     }
