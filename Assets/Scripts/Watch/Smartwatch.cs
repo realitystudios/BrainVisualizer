@@ -21,18 +21,17 @@ public class Smartwatch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-    }
+        VRTK.VRTK_ControllerEvents controllerEvents = GetComponentInParent<VRTK.VRTK_ControllerEvents>();
 
-    // Update is called once per frame
-    void Update()
-    {
+        controllerEvents.ButtonTwoPressed += (sender, e) => { ToggleMenu(); };
+
+        m_Menu.SetActive(m_MenuActive);
     }
 
     public void ToggleMenu()
     {
-        m_Menu.SetActive(m_MenuActive);
-
         m_MenuActive = !m_MenuActive;
+        m_Menu.SetActive(m_MenuActive);
     }
 
     private void OnEnable()
