@@ -42,8 +42,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 80, y: 0}
-  m_SizeDelta: {x: 136, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4384926245917706634
 MonoBehaviour:
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4414024383322330428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4414024383322330428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -2095666955, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4414770025775203012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4414770025775203012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4414770025775203012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -214,8 +214,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: ee664e149de442c4794a92b42b8bbe4d, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
@@ -225,6 +223,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &4383327060909714718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,7 +252,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4414770025775203012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
@@ -267,7 +266,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4414770025775203012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1297475563, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -281,6 +280,8 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
 --- !u!1 &4414925905277447338
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +367,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4415222076658060998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -375,8 +376,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0fda1528e26e2634ebc6af4ebfbe9308, type: 3}
     m_FontSize: 14
@@ -403,6 +402,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: VRUI-Button_Grid (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Text
+      value: Search
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 986adfd827b83984c94ace605b5eb15b, type: 3}
     - target: {fileID: 8587414299095368545, guid: 50372065439595146b02ce2b411b2b37,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -508,16 +517,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 2800000, guid: 986adfd827b83984c94ace605b5eb15b, type: 3}
-    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Text
-      value: Search
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50372065439595146b02ce2b411b2b37, type: 3}
 --- !u!224 &6642408433977612567 stripped
@@ -538,6 +537,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: VRUI-Button_Grid (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Text
+      value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1be97b8c18e9987418fa0581a471e37f, type: 3}
     - target: {fileID: 8587414299095368545, guid: 50372065439595146b02ce2b411b2b37,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -643,16 +652,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 2800000, guid: 1be97b8c18e9987418fa0581a471e37f, type: 3}
-    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Text
-      value: Settings
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50372065439595146b02ce2b411b2b37, type: 3}
 --- !u!224 &6642408433759333573 stripped
@@ -673,6 +672,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: VRUI-Button_Grid (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Text
+      value: Library
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: c21b90f6e2346944d9ee0d9cb55f158e, type: 3}
     - target: {fileID: 8587414299095368545, guid: 50372065439595146b02ce2b411b2b37,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -778,16 +787,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 2800000, guid: c21b90f6e2346944d9ee0d9cb55f158e, type: 3}
-    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Text
-      value: Library
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50372065439595146b02ce2b411b2b37, type: 3}
 --- !u!224 &6642408434378251550 stripped
@@ -808,6 +807,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: VRUI-Button_Grid (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Text
+      value: Apps
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 996181a51e22d804b96fd8f44fbbc390, type: 3}
     - target: {fileID: 8587414299095368545, guid: 50372065439595146b02ce2b411b2b37,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -913,16 +922,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 2800000, guid: 996181a51e22d804b96fd8f44fbbc390, type: 3}
-    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Text
-      value: Apps
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50372065439595146b02ce2b411b2b37, type: 3}
 --- !u!224 &6642408434638943988 stripped
@@ -943,6 +942,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: VRUI-Button_Grid (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Text
+      value: Social
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 85a061aac8249ca48aab33ab0a5ccb3a, type: 3}
     - target: {fileID: 8587414299095368545, guid: 50372065439595146b02ce2b411b2b37,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1048,16 +1057,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 2800000, guid: 85a061aac8249ca48aab33ab0a5ccb3a, type: 3}
-    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Text
-      value: Social
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50372065439595146b02ce2b411b2b37, type: 3}
 --- !u!224 &6642408435002576827 stripped
@@ -1078,6 +1077,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: VRUI-Button_Grid (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Text
+      value: Logout
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 2c11d7d8d1794d54389f8c285d224951, type: 3}
     - target: {fileID: 8587414299095368545, guid: 50372065439595146b02ce2b411b2b37,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1183,16 +1192,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 2800000, guid: 2c11d7d8d1794d54389f8c285d224951, type: 3}
-    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Text
-      value: Logout
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50372065439595146b02ce2b411b2b37, type: 3}
 --- !u!224 &6642408434952993217 stripped
@@ -1213,6 +1212,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: VRUI-Button_Grid (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Text
+      value: Security
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: a7c1f19e54e50a244adc48c7c55499e0, type: 3}
     - target: {fileID: 8587414299095368545, guid: 50372065439595146b02ce2b411b2b37,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1317,16 +1326,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8478138580996785433, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 2800000, guid: a7c1f19e54e50a244adc48c7c55499e0, type: 3}
-    - target: {fileID: 8478040190041550151, guid: 50372065439595146b02ce2b411b2b37,
-        type: 3}
-      propertyPath: m_Text
-      value: Security
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50372065439595146b02ce2b411b2b37, type: 3}
