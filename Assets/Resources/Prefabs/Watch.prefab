@@ -358,7 +358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.0269}
+  m_AnchoredPosition: {x: 0, y: 0.025}
   m_SizeDelta: {x: 4.2, y: 4.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3964600789763212371
@@ -505,6 +505,7 @@ GameObject:
   - component: {fileID: 1333809620345782198}
   - component: {fileID: 1308124041731305704}
   - component: {fileID: 1885217643474990921}
+  - component: {fileID: 5321690553515427950}
   m_Layer: 0
   m_Name: VRUI-Button_ControlBar (Settings)
   m_TagString: VRUIButtonControlBar
@@ -662,6 +663,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5321690553515427950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2154905385538254668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd87db1c8fd1e814284a19ca9cbd21cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ButtonCooldown: 1
 --- !u!1 &2762139379006670720
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,6 +688,7 @@ GameObject:
   - component: {fileID: 2685459652526555800}
   - component: {fileID: 2865515642355938516}
   - component: {fileID: 2762139379006670721}
+  - component: {fileID: 9115030326151168022}
   m_Layer: 0
   m_Name: VRUI-Button_Grid
   m_TagString: VRUIButtonIcon
@@ -781,6 +796,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9115030326151168022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2762139379006670720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd87db1c8fd1e814284a19ca9cbd21cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ButtonCooldown: 1
 --- !u!1 &2762799504053494084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,6 +1118,7 @@ GameObject:
   - component: {fileID: 68478892748137696}
   - component: {fileID: 811970854856289784}
   - component: {fileID: 6452961674372584385}
+  - component: {fileID: 8555407772116865516}
   m_Layer: 0
   m_Name: VRUI-Button (Dark Mode)
   m_TagString: VRUIButtonList
@@ -1208,6 +1237,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8555407772116865516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3124356287324333921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd87db1c8fd1e814284a19ca9cbd21cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ButtonCooldown: 1
 --- !u!1 &3343839289813582268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,8 +1276,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3343839289813582268}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0283, z: 0}
-  m_LocalScale: {x: 0.04, y: 0.005, z: 0.04}
+  m_LocalPosition: {x: 0, y: 0.024, z: 0}
+  m_LocalScale: {x: 0.04, y: 0.02, z: 0.04}
   m_Children: []
   m_Father: {fileID: 4445556919726577509}
   m_RootOrder: 1
@@ -1253,6 +1295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Watch: {fileID: 508251878070626541}
+  m_Cooldown: 0
 --- !u!65 &3988152850888413998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1642,6 +1685,7 @@ GameObject:
   - component: {fileID: 4065452643589670830}
   - component: {fileID: 4245649508582289890}
   - component: {fileID: 4285984087877288631}
+  - component: {fileID: 7727487046088712213}
   m_Layer: 0
   m_Name: VRUI-Button_Grid (1)
   m_TagString: VRUIButtonIcon
@@ -1749,6 +1793,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7727487046088712213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4285984087877288630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd87db1c8fd1e814284a19ca9cbd21cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ButtonCooldown: 1
 --- !u!1 &4445556919726410565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,6 +2070,7 @@ GameObject:
   - component: {fileID: 5000046976707389319}
   - component: {fileID: 4082486568127269038}
   - component: {fileID: 386576475558276786}
+  - component: {fileID: 434058781857976085}
   m_Layer: 0
   m_Name: VRUI-Button (Controllers)
   m_TagString: VRUIButtonList
@@ -2131,6 +2189,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &434058781857976085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5595444863598790511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd87db1c8fd1e814284a19ca9cbd21cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ButtonCooldown: 1
 --- !u!1 &5606550742301880080
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,6 +2392,7 @@ GameObject:
   - component: {fileID: 7100427795659587474}
   - component: {fileID: 3665059183716879339}
   - component: {fileID: 7662012990448432911}
+  - component: {fileID: 4818886376526063814}
   m_Layer: 0
   m_Name: VRUI-Button_ControlBar (Environment)
   m_TagString: VRUIButtonControlBar
@@ -2478,6 +2550,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4818886376526063814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239010216805107226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd87db1c8fd1e814284a19ca9cbd21cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ButtonCooldown: 1
 --- !u!1 &6415458690294322886
 GameObject:
   m_ObjectHideFlags: 0
@@ -3650,6 +3735,7 @@ GameObject:
   - component: {fileID: 7070532858147012908}
   - component: {fileID: 6961980113991079580}
   - component: {fileID: 6962344346633250258}
+  - component: {fileID: 4380678580869564465}
   m_Layer: 0
   m_Name: VRUI-Button_List (1)
   m_TagString: VRUIButtonList
@@ -3757,6 +3843,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4380678580869564465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6993101084356870872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd87db1c8fd1e814284a19ca9cbd21cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ButtonCooldown: 1
 --- !u!1 &6993113810631039070
 GameObject:
   m_ObjectHideFlags: 0
@@ -4364,6 +4463,7 @@ GameObject:
   - component: {fileID: 7069674039756446688}
   - component: {fileID: 6962415389007224752}
   - component: {fileID: 6962338769149468366}
+  - component: {fileID: 4777024058251651517}
   m_Layer: 0
   m_Name: VRUI-Button_List
   m_TagString: VRUIButtonList
@@ -4471,6 +4571,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4777024058251651517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6993794369919842584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd87db1c8fd1e814284a19ca9cbd21cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ButtonCooldown: 1
 --- !u!1 &7134470623822932631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4639,6 +4752,7 @@ GameObject:
   - component: {fileID: 7914443467624461524}
   - component: {fileID: 7914768414735759374}
   - component: {fileID: 7914661503353703472}
+  - component: {fileID: 8525391119779877770}
   m_Layer: 0
   m_Name: VRUI-Button_ControlBar (Model)
   m_TagString: VRUIButtonControlBar
@@ -4796,6 +4910,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8525391119779877770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7800370737911113194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd87db1c8fd1e814284a19ca9cbd21cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ButtonCooldown: 1
 --- !u!1 &7801692947321440784
 GameObject:
   m_ObjectHideFlags: 0
@@ -4810,6 +4937,7 @@ GameObject:
   - component: {fileID: 7914720712088968526}
   - component: {fileID: 7914562452086033098}
   - component: {fileID: 7913982156943635408}
+  - component: {fileID: 2596842006786163284}
   m_Layer: 0
   m_Name: VRUI-Button_ControlBar (Exit)
   m_TagString: VRUIButtonControlBar
@@ -4967,6 +5095,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2596842006786163284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7801692947321440784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd87db1c8fd1e814284a19ca9cbd21cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ButtonCooldown: 1
 --- !u!1 &7801697117755205394
 GameObject:
   m_ObjectHideFlags: 0
