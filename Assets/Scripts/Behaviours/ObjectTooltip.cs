@@ -92,7 +92,10 @@ public class ObjectTooltip : MonoBehaviour
         SetLine();
         if (drawLineTo == null && transform.parent != null)
         {
-            drawLineTo = transform.parent;
+            Transform t = new GameObject().transform;
+            t.parent = transform.parent;
+            t.position = GetComponentInParent<Renderer>().bounds.center;
+            drawLineTo = t;
         }
         OnObjectTooltipReset(SetEventPayload());
     }
@@ -150,7 +153,7 @@ public class ObjectTooltip : MonoBehaviour
 
     protected virtual void SetText(string name)
     {
-        TextMeshProUGUI tmpText = transform.Find("TooltipCanvas/" + name).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI tmpText = transform.Find("TooltipCanvas/UIContainer/" + name).GetComponent<TextMeshProUGUI>();
         tmpText.material = Resources.Load("UIText") as Material;
         tmpText.text = displayText.Replace("\\n", "\n");
         tmpText.enableCulling = true;

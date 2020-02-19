@@ -17,7 +17,6 @@ public class FingerTrigger : MonoBehaviour
         m_Button = GetComponent<VRUIControlBarButton>();
         if (!m_Button)
         {
-            Debug.Log("VRUI Control Bar Button not Found... Falling back to UI Button");
             m_Button = GetComponent<Button>();
         }
 

@@ -20,10 +20,9 @@ public class ObjectDescriptor : MonoBehaviour {
     private Vector3 m_TooltipOffset;
     [SerializeField, Tooltip("Size of the tooltip")]
     private Vector2 m_TooltipSize;
-    [SerializeField]
-    private int m_TooltipFontSize;
 
     private ObjectTooltip m_CurrentTooltip;
+    private Vector3 m_TooltipLineEnd;
 
     protected void OnEnable()
     {
@@ -32,6 +31,8 @@ public class ObjectDescriptor : MonoBehaviour {
             GetComponent<VRTK_InteractableObject>().InteractableObjectUsed += InteractableObjectUsed;
             GetComponent<VRTK_InteractableObject>().InteractableObjectUnused += InteractableObjectUnused;
         }
+
+        m_TooltipLineEnd = GetComponent<Renderer>().bounds.center;
     }
 
     protected virtual void OnDisable()
@@ -73,10 +74,7 @@ public class ObjectDescriptor : MonoBehaviour {
 
             m_CurrentTooltip.transform.localPosition = m_TooltipOffset;
             m_CurrentTooltip.containerSize = m_TooltipSize;
-            m_CurrentTooltip.fontSize = m_TooltipFontSize;
             m_CurrentTooltip.alwaysFaceHeadset = true;
-            m_CurrentTooltip.drawLineFrom = m_CurrentTooltip.transform;
-            m_CurrentTooltip.drawLineTo = transform;
 
             m_CurrentTooltip.UpdateText(m_ObjectName + '\n' + m_ObjectDescription);
 

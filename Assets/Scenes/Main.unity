@@ -4462,7 +4462,7 @@ MonoBehaviour:
   touchpadText: Activate Pointer
   touchpadTwoText: 
   buttonOneText: 
-  buttonTwoText: Open Menu
+  buttonTwoText: 
   startMenuText: 
   tipBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   tipTextColor: {r: 1, g: 1, b: 1, a: 1}
@@ -5498,7 +5498,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 62.5, y: 16.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &937655817
 MonoBehaviour:
@@ -7776,7 +7776,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 62.5, y: 16.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1085876596
 MonoBehaviour:
@@ -7913,7 +7913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092500030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 15603938}
@@ -13702,7 +13702,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1737140933
 Transform:
   m_ObjectHideFlags: 0
@@ -14915,7 +14915,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2012996212
 Transform:
   m_ObjectHideFlags: 0
@@ -14945,7 +14945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ed683b89cd94a44bb399806ce5cce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: Open Menu
+  displayText: 
   fontSize: 14
   containerSize: {x: 100, y: 30}
   drawLineFrom: {fileID: 1072424658}
