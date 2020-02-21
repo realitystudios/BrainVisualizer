@@ -12,60 +12,35 @@ public class SettingsManager : MonoBehaviour
     private GameObject m_ControllerTooltip;
 
     [SerializeField]
-    private GameObject m_DarkThemeIcon;
+    private VRUICheckbox m_ControllerCheckbox;
     [SerializeField]
-    private GameObject m_ControllerActiveIcon;
-
-    private bool m_DarkThemeActive = false;
-    private bool m_ControllersActive = true;
+    private VRUICheckbox m_DarkModeCheckbox;
 
     private void Start()
     {
-        m_DarkThemeActive = m_Pallete.isDarkTheme;
-        m_DarkThemeIcon.SetActive(m_DarkThemeActive);
+        m_DarkModeCheckbox.onValueChanged.AddListener((state) => { ToggleDarkMode(state); }) ;
+        m_DarkModeCheckbox.isOn = m_Pallete.isDarkTheme;
 
-        m_ControllersActive = m_OVRAvatar.StartWithControllers;
-        m_OVRAvatar.ShowControllers(m_ControllersActive);
-        m_ControllerActiveIcon.SetActive(m_ControllersActive);
+        m_ControllerCheckbox.onValueChanged.AddListener((state) => { ToggleControllers(state); });
+        m_ControllerCheckbox.isOn = m_OVRAvatar.StartWithControllers;
     }
 
-    public void ToggleDarkMode()
+    public void ToggleDarkMode(bool state)
     {
-        m_DarkThemeActive = !m_DarkThemeActive;
-        m_Pallete.isDarkTheme = m_DarkThemeActive;
+        m_Pallete.isDarkTheme = state;
         m_Pallete.UpdateColors();
-
-        if (m_DarkThemeIcon) 
-        { 
-            m_DarkThemeIcon.SetActive(m_DarkThemeActive);
-        } 
-        else
-        {
-            Debug.LogWarning("Dark Theme Icon not set");
-        }
     }
 
-    public void ToggleControllers()
+    public void ToggleControllers(bool state)
     {
-        m_ControllersActive = !m_ControllersActive;
-
         if (m_OVRAvatar)
         {
-            m_OVRAvatar.ShowControllers(m_ControllersActive);
+            m_OVRAvatar.ShowControllers(state);
         }
 
         if (m_ControllerTooltip)
         {
-            m_ControllerTooltip.SetActive(m_ControllersActive);
-        }
-
-        if (m_ControllerActiveIcon)
-        {
-            m_ControllerActiveIcon.SetActive(m_ControllersActive);
-        } 
-        else
-        {
-            Debug.LogWarning("Controller not set");
+            m_ControllerTooltip.SetActive(state);
         }
     }
 }

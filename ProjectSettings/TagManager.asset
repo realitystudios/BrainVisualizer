@@ -19,6 +19,7 @@ TagManager:
   - VRUIRadio
   - VRUISlider
   - VRUIAccent
+  - VRUIDropdown
   layers:
   - Default
   - TransparentFX
