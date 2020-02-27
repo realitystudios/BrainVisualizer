@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
+using TMPro;
 
 [RequireComponent(typeof(AudioSource))]
 public class ObjectDescriptor : MonoBehaviour {
@@ -24,6 +25,9 @@ public class ObjectDescriptor : MonoBehaviour {
     private ObjectTooltip m_CurrentTooltip;
     private Vector3 m_TooltipLineEnd;
 
+    [SerializeField]
+    private AudioSource m_AudioSource;
+
     protected void OnEnable()
     {
         if (GetComponent<VRTK_InteractableObject>() != null)
@@ -33,6 +37,8 @@ public class ObjectDescriptor : MonoBehaviour {
         }
 
         m_TooltipLineEnd = GetComponent<Renderer>().bounds.center;
+
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     protected virtual void OnDisable()
@@ -78,10 +84,19 @@ public class ObjectDescriptor : MonoBehaviour {
 
             m_CurrentTooltip.UpdateText(m_ObjectName + '\n' + m_ObjectDescription);
 
-            if (GetComponent<AudioSource>().clip != null)
-            {
-                GetComponent<AudioSource>().Play();
-            }
+            m_CurrentTooltip.Button.onClick.AddListener(() => {
+                if (m_AudioSource.isPlaying)
+                {
+                    m_AudioSource.Stop();
+                    m_CurrentTooltip.Button.GetComponent<TextMeshProUGUI>().text = "Play";
+                } 
+                else
+                {
+                    PlayAudio();
+                    Debug.Log(m_CurrentTooltip.Button);
+                    m_CurrentTooltip.Button.GetComponent<TextMeshProUGUI>().text = "Stop";
+                }
+            });
         }
         else
         {

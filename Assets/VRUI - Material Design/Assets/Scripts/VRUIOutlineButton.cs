@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 // VRUI Outline Button Component
 
 public class VRUIOutlineButton : UnityEngine.UI.Button {
 
-	Text text;
+	TextMeshProUGUI text;
 
 	// Override base transition method to add the coloring of the text as part of the transition effect 
 
@@ -49,7 +50,7 @@ public class VRUIOutlineButton : UnityEngine.UI.Button {
 		}
 		if (text == null)
 		{
-			text = GetComponentInChildren<Text>();
+			text = GetComponentInChildren<TextMeshProUGUI>();
 		}
 
 		base.image.CrossFadeColor(targetColor, (!instant) ? this.colors.fadeDuration : 0f, true, true);
