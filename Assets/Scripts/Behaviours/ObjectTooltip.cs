@@ -23,6 +23,8 @@ public class ObjectTooltip : MonoBehaviour
 {
     [Tooltip("The text that is displayed on the tooltip.")]
     public string displayText;
+    [Tooltip("The title that is displayed on the tooltip")]
+    public string displayTitle;
     [Tooltip("The size of the text that is displayed.")]
     public int fontSize = 14;
     [Tooltip("The size of the tooltip container where `x = width` and `y = height`.")]
@@ -40,6 +42,8 @@ public class ObjectTooltip : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI m_CanvasText;
+    [SerializeField]
+    private TextMeshProUGUI m_CanvasTitle;
     [SerializeField]
     private Button m_Button;
 
@@ -91,12 +95,14 @@ public class ObjectTooltip : MonoBehaviour
         OnObjectTooltipReset(SetEventPayload());
     }
 
+
     /// <summary>
     /// The UpdateText method allows the tooltip text to be updated at runtime.
     /// </summary>
     /// <param name="newText">A string containing the text to update the tooltip to display.</param>
-    public virtual void UpdateText(string newText)
+    public virtual void UpdateText(string newTitle, string newText)
     {
+        displayTitle = newTitle;
         displayText = newText;
         OnObjectTooltipTextUpdated(SetEventPayload(newText));
         ResetTooltip();
@@ -143,10 +149,13 @@ public class ObjectTooltip : MonoBehaviour
 
     protected virtual void SetText()
     {
-        TextMeshProUGUI tmpText = m_CanvasText;
-        tmpText.material = Resources.Load("UIText") as Material;
-        tmpText.text = displayText.Replace("\\n", "\n");
-        tmpText.enableCulling = true;
+        m_CanvasTitle.material = Resources.Load("UIText") as Material;
+        m_CanvasTitle.text = displayTitle.Replace("\\n", "\n");
+        m_CanvasTitle.enableCulling = true;
+        
+        m_CanvasText.material = Resources.Load("UIText") as Material;
+        m_CanvasText.text = displayText.Replace("\\n", "\n");
+        m_CanvasText.enableCulling = true;
         //tmpText.color = fontColor;
         //tmpText.fontSize = fontSize;
     }

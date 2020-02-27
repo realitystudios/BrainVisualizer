@@ -82,19 +82,18 @@ public class ObjectDescriptor : MonoBehaviour {
             m_CurrentTooltip.containerSize = m_TooltipSize;
             m_CurrentTooltip.alwaysFaceHeadset = true;
 
-            m_CurrentTooltip.UpdateText(m_ObjectName + '\n' + m_ObjectDescription);
+            m_CurrentTooltip.UpdateText(m_ObjectName, m_ObjectDescription);
 
             m_CurrentTooltip.Button.onClick.AddListener(() => {
                 if (m_AudioSource.isPlaying)
                 {
                     m_AudioSource.Stop();
-                    m_CurrentTooltip.Button.GetComponent<TextMeshProUGUI>().text = "Play";
+                    m_CurrentTooltip.Button.GetComponentInChildren<TextMeshProUGUI>().text = "Play";
                 } 
                 else
                 {
                     PlayAudio();
-                    Debug.Log(m_CurrentTooltip.Button);
-                    m_CurrentTooltip.Button.GetComponent<TextMeshProUGUI>().text = "Stop";
+                    m_CurrentTooltip.Button.GetComponentInChildren<TextMeshProUGUI>().text = "Stop";
                 }
             });
         }
