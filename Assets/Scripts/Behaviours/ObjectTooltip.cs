@@ -19,17 +19,6 @@ public struct ObjectTooltipEventArgs
 /// <param name="e"><see cref="ObjectTooltipEventArgs"/></param>
 public delegate void ObjectTooltipEventHandler(object sender, ObjectTooltipEventArgs e);
 
-/// <summary>
-/// Adds a World Space Canvas that can be used to provide additional information about an object by providing a piece of text with a line drawn to a destination point.
-/// </summary>
-/// <remarks>
-/// **Prefab Usage:**
-///  * Place the `VRTK/Prefabs/ObjectTooltip/ObjectTooltip` prefab into the scene hierarchy, preferably as a child of the GameObject it is associated with.
-///  * Set the `Draw Line To` option to the Transform component of the GameObject the Tooltip will be assoicated with.
-/// </remarks>
-/// <example>
-/// `VRTK/Examples/029_Controller_Tooltips` displays two cubes that have an object tooltip added to them along with tooltips that have been added to the controllers.
-/// </example>
 public class ObjectTooltip : MonoBehaviour
 {
     [Tooltip("The text that is displayed on the tooltip.")]
@@ -44,14 +33,17 @@ public class ObjectTooltip : MonoBehaviour
     public Transform drawLineTo;
     [Tooltip("The width of the line drawn between the tooltip and the destination transform.")]
     public float lineWidth = 0.001f;
-    [Tooltip("The colour to use for the text on the tooltip.")]
-    public Color fontColor = Color.black;
-    [Tooltip("The colour to use for the background container of the tooltip.")]
-    public Color containerColor = Color.black;
     [Tooltip("The colour to use for the line drawn between the tooltip and the destination transform.")]
     public Color lineColor = Color.black;
     [Tooltip("If this is checked then the tooltip will be rotated so it always face the headset.")]
     public bool alwaysFaceHeadset = false;
+
+    [SerializeField]
+    private TextMeshProUGUI m_CanvasText;
+    [SerializeField]
+    private Button m_Button;
+
+    public Button Button { get { return m_Button; } }
 
     /// <summary>
     /// Emitted when the object tooltip is reset.
@@ -87,8 +79,7 @@ public class ObjectTooltip : MonoBehaviour
     public virtual void ResetTooltip()
     {
         SetContainer();
-        SetText("UITextFront");
-        SetText("UITextReverse");
+        SetText();
         SetLine();
         if (drawLineTo == null && transform.parent != null)
         {
@@ -145,20 +136,19 @@ public class ObjectTooltip : MonoBehaviour
 
     protected virtual void SetContainer()
     {
-        transform.Find("TooltipCanvas").GetComponent<RectTransform>().sizeDelta = containerSize;
-        Transform tmpContainer = transform.Find("TooltipCanvas/UIContainer");
-        tmpContainer.GetComponent<RectTransform>().sizeDelta = containerSize;
-        tmpContainer.GetComponent<Image>().color = containerColor;
+        //transform.Find("TooltipCanvas").GetComponent<RectTransform>().sizeDelta = containerSize;
+        //Transform tmpContainer = transform.Find("TooltipCanvas/UIContainer");
+        //tmpContainer.GetComponent<RectTransform>().sizeDelta = containerSize;
     }
 
-    protected virtual void SetText(string name)
+    protected virtual void SetText()
     {
-        TextMeshProUGUI tmpText = transform.Find("TooltipCanvas/UIContainer/" + name).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI tmpText = m_CanvasText;
         tmpText.material = Resources.Load("UIText") as Material;
         tmpText.text = displayText.Replace("\\n", "\n");
         tmpText.enableCulling = true;
-        tmpText.color = fontColor;
-        tmpText.fontSize = fontSize;
+        //tmpText.color = fontColor;
+        //tmpText.fontSize = fontSize;
     }
 
     protected virtual void SetLine()

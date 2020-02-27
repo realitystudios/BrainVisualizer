@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
   m_TooltipOffset: {x: 0, y: 0, z: 0}
   m_TooltipSize: {x: 2000, y: 1000}
-  m_TooltipFontSize: 72
+  m_AudioSource: {fileID: 82338075980370796}
 --- !u!82 &82338075980370796
 AudioSource:
   m_ObjectHideFlags: 0
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
   m_TooltipOffset: {x: 0, y: 0, z: 0}
   m_TooltipSize: {x: 2000, y: 1000}
-  m_TooltipFontSize: 72
+  m_AudioSource: {fileID: 82427037262517124}
 --- !u!82 &82427037262517124
 AudioSource:
   m_ObjectHideFlags: 0
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
   m_TooltipOffset: {x: 0, y: 0, z: 0}
   m_TooltipSize: {x: 2000, y: 1000}
-  m_TooltipFontSize: 72
+  m_AudioSource: {fileID: 82131530149125784}
 --- !u!82 &82131530149125784
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1215,7 +1215,7 @@ MonoBehaviour:
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
   m_TooltipOffset: {x: 0, y: 0, z: 0}
   m_TooltipSize: {x: 2000, y: 1000}
-  m_TooltipFontSize: 72
+  m_AudioSource: {fileID: 82051964486680912}
 --- !u!82 &82051964486680912
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1550,7 +1550,7 @@ MonoBehaviour:
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
   m_TooltipOffset: {x: 0, y: 0, z: 0}
   m_TooltipSize: {x: 2000, y: 1000}
-  m_TooltipFontSize: 72
+  m_AudioSource: {fileID: 82426272889250804}
 --- !u!82 &82426272889250804
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1889,7 +1889,7 @@ MonoBehaviour:
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
   m_TooltipOffset: {x: 0, y: 0, z: 0}
   m_TooltipSize: {x: 2000, y: 1000}
-  m_TooltipFontSize: 72
+  m_AudioSource: {fileID: 82642034344781148}
 --- !u!82 &82642034344781148
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2284,7 +2284,7 @@ MonoBehaviour:
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
   m_TooltipOffset: {x: -2, y: 0, z: -2}
   m_TooltipSize: {x: 2000, y: 1000}
-  m_TooltipFontSize: 72
+  m_AudioSource: {fileID: 82208754533092352}
 --- !u!82 &82208754533092352
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2623,7 +2623,7 @@ MonoBehaviour:
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
   m_TooltipOffset: {x: 0, y: 0, z: 0}
   m_TooltipSize: {x: 2000, y: 1000}
-  m_TooltipFontSize: 72
+  m_AudioSource: {fileID: 82139407952866436}
 --- !u!82 &82139407952866436
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2962,7 +2962,7 @@ MonoBehaviour:
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
   m_TooltipOffset: {x: 0, y: 0, z: 0}
   m_TooltipSize: {x: 2000, y: 1000}
-  m_TooltipFontSize: 72
+  m_AudioSource: {fileID: 82536978930719240}
 --- !u!82 &82536978930719240
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3301,7 +3301,7 @@ MonoBehaviour:
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
   m_TooltipOffset: {x: 0, y: 0, z: 0}
   m_TooltipSize: {x: 2000, y: 1000}
-  m_TooltipFontSize: 72
+  m_AudioSource: {fileID: 82278528646949082}
 --- !u!82 &82278528646949082
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3639,7 +3639,7 @@ MonoBehaviour:
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
   m_TooltipOffset: {x: 0, y: 0, z: 0}
   m_TooltipSize: {x: 2000, y: 1000}
-  m_TooltipFontSize: 72
+  m_AudioSource: {fileID: 82088876413051868}
 --- !u!82 &82088876413051868
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3977,7 +3977,7 @@ MonoBehaviour:
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
   m_TooltipOffset: {x: 0, y: 0, z: 0}
   m_TooltipSize: {x: 2000, y: 1000}
-  m_TooltipFontSize: 72
+  m_AudioSource: {fileID: 82904752210196698}
 --- !u!82 &82904752210196698
 AudioSource:
   m_ObjectHideFlags: 0
