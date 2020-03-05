@@ -1,21 +1,60 @@
 fileFormatVersion: 2
 guid: 57bac0053ac9e8847a6432bba85e9ded
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Watch
-    400000: //RootNode
-    400002: Watch
-    2100000: Watch Strap
-    2100002: Watch Body
-    2100004: Watch Screen
-    2300000: //RootNode
-    2300002: Watch
-    3300000: //RootNode
-    3300002: Watch
-    4300000: Watch
-  externalObjects: {}
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Watch
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: Watch
+  - first:
+      21: 2100000
+    second: Watch Strap
+  - first:
+      21: 2100002
+    second: Watch Body
+  - first:
+      21: 2100004
+    second: Watch Screen
+  - first:
+      23: 2300000
+    second: //RootNode
+  - first:
+      23: 2300002
+    second: Watch
+  - first:
+      33: 3300000
+    second: //RootNode
+  - first:
+      33: 3300002
+    second: Watch
+  - first:
+      43: 4300000
+    second: Watch
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Watch Body
+    second: {fileID: 2100000, guid: 526677b7c6fbe504aaaff65f639bc8d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Watch Screen
+    second: {fileID: 2100000, guid: 9fa30d25a7bb8f744acec79b0292af0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Watch Strap
+    second: {fileID: 2100000, guid: be8099f9ab2553341a20361e4627b229, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -50,6 +89,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -57,18 +97,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 1
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -77,10 +118,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -90,6 +132,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 0.13
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
