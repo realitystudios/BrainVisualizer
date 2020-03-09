@@ -28,29 +28,32 @@ public class ObjectDescriptor : MonoBehaviour {
     [SerializeField]
     private AudioSource m_AudioSource;
 
+    public string ObjectName { get { return m_ObjectName; } }
+    public string ObjectDescription { get { return m_ObjectDescription; } }
+
     protected void OnEnable()
     {
-        if (GetComponent<VRTK_InteractableObject>() != null)
+        /*if (GetComponent<VRTK_InteractableObject>() != null)
         {
             GetComponent<VRTK_InteractableObject>().InteractableObjectUsed += InteractableObjectUsed;
             GetComponent<VRTK_InteractableObject>().InteractableObjectUnused += InteractableObjectUnused;
         }
 
-        m_TooltipLineEnd = GetComponent<Renderer>().bounds.center;
+        m_TooltipLineEnd = GetComponent<Renderer>().bounds.center;*/
 
         m_AudioSource = GetComponent<AudioSource>();
     }
 
     protected virtual void OnDisable()
     {
-        if (GetComponent<VRTK_InteractableObject>() != null)
+        /*if (GetComponent<VRTK_InteractableObject>() != null)
         {
             GetComponent<VRTK_InteractableObject>().InteractableObjectUsed -= InteractableObjectUsed;
             GetComponent<VRTK_InteractableObject>().InteractableObjectUnused -= InteractableObjectUnused;
-        }
+        }*/
     }
 
-    protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
+    /*protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
         if (m_CurrentTooltip == null)
         {
@@ -110,11 +113,21 @@ public class ObjectDescriptor : MonoBehaviour {
 
         if (m_CurrentTooltip != null)
             Destroy(m_CurrentTooltip.gameObject);
-    }
+    }*/
 
     public void PlayAudio()
     {
-        if (GetComponent<AudioSource>().clip != null)
-            GetComponent<AudioSource>().Play();   
+        if (m_AudioSource.clip != null)
+        {
+            m_AudioSource.Play();   
+        }
+    }
+
+    public void StopAudio()
+    {
+        if (m_AudioSource.clip != null)
+        {
+            m_AudioSource.Stop();
+        }
     }
 }

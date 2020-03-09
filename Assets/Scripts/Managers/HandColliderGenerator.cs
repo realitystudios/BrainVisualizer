@@ -7,9 +7,8 @@ public class HandColliderGenerator : MonoBehaviour
 {
     [SerializeField]
     private OvrAvatar m_Avatar;
-    [SerializeField]
+
     private OvrAvatarHand[] m_Hands;
-    [SerializeField]
     private OvrAvatarTouchController[] m_Controllers;
 
     // Start is called before the first frame update

@@ -84,14 +84,14 @@ public class ObjectTooltip : MonoBehaviour
     {
         SetContainer();
         SetText();
-        SetLine();
-        if (drawLineTo == null && transform.parent != null)
+        //SetLine();
+        /*if (drawLineTo == null && transform.parent != null)
         {
             Transform t = new GameObject().transform;
             t.parent = transform.parent;
             t.position = GetComponentInParent<Renderer>().bounds.center;
             drawLineTo = t;
-        }
+        }*/
         OnObjectTooltipReset(SetEventPayload());
     }
 
@@ -126,7 +126,7 @@ public class ObjectTooltip : MonoBehaviour
 
     protected virtual void Update()
     {
-        DrawLine();
+        //DrawLine();
         if (alwaysFaceHeadset)
         {
             transform.LookAt(headset);
@@ -160,7 +160,7 @@ public class ObjectTooltip : MonoBehaviour
         //tmpText.fontSize = fontSize;
     }
 
-    protected virtual void SetLine()
+    /*protected virtual void SetLine()
     {
         line = transform.Find("Line").GetComponent<LineRenderer>();
         line.material = Resources.Load("TooltipLine") as Material;
@@ -178,14 +178,14 @@ public class ObjectTooltip : MonoBehaviour
         {
             drawLineFrom = transform;
         }
-    }
+    }*/
 
-    protected virtual void DrawLine()
+    /*protected virtual void DrawLine()
     {
         if (drawLineTo != null)
         {
             line.SetPosition(0, drawLineFrom.position);
             line.SetPosition(1, drawLineTo.position);
         }
-    }
+    }*/
 }
