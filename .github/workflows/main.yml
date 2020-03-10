@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Unity - Test & Build
 env:
   BUILD_NAME: BrainViz
   TARGET_PLATFORM: Android
@@ -12,25 +12,9 @@ env:
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  activation:
-    name: Request Manual Activation File
-    runs-on: ubuntu-latest
-    steps:
-      - name: Request manual activation file
-        id: getManualLicenseFile
-        uses: webbertakken/unity-request-manual-activation-file@v1.1
-        with:
-          unityVersion: $UNITY_VERSION
-      - name: Expose as artifact
-        uses: actions/upload-artifact@v1
-        with:
-          name: ${{ steps.getManualLicenseFile.outputs.filePath }}
-          path: ${{ steps.getManualLicenseFile.outputs.filePath }}
-
   # Runs the Unity's Testing Suite
   test:
     name: Run Unity Testing Suite
@@ -47,16 +31,17 @@ jobs:
           lfs: true
       - uses: actions/cache@v1.1.0
         with:
+          path: ${{ env.PROJECT_PATH }}/Library
           key: Library
       - name: Unity - Test
         id: testProject
-        uses: webbertaken/unity-test-runner@v1.5
+        uses: webbertakken/unity-test-runner@v1.5
         with: 
-          unityVersion: $UNITY_VERSION
+          unityVersion: ${{ env.UNITY_VERSION }}
       - name: Upload Test Results
-        uses: actions/upload-artifacts@v1
+        uses: actions/upload-artifact@v1
         with:
-          name: $BUILD_NAME_${{ matrix.testMode }}_results
+          name: ${{ env.BUILD_NAME }}_${{ matrix.testMode }}_results
           path: ${{ steps.testProject.output.artifactsPath }}
         
   # Builds the Unity Project
@@ -70,21 +55,21 @@ jobs:
         lfs: true
     - uses: actions/cache@v1.1.0
       with:
-        path: $PROJECT_PATH/Library
-        key: Library-$PROJECT_PATH-$TARGET_PLATFORM
+        path: ${{ env.PROJECT_PATH }}/Library
+        key: Library-${{ env.PROJECT_PATH }}-${{ env.TARGET_PLATFORM }}
         restore-keys: |
-          Library-$PROJECT_PATH-
+          Library-${{ env.PROJECT_PATH }}-
           Library-
     - name: Unity - Build
       uses: webbertakken/unity-builder@v0.11
       with:
-        unityVersion: $UNITY_VERSION
-        targetPlatform: $TARGET_PLATFORM
-        buildName: $BUILD_NAME
-        buildsPath: $PROJECT_PATH/build/android
+        unityVersion: ${{ env.UNITY_VERSION }}
+        targetPlatform: ${{ env.TARGET_PLATFORM }}
+        buildName: ${{ env.BUILD_NAME }}
+        buildsPath: ${{ env.PROJECT_PATH }}/build/android
         buildMethod: BuildCommand.PerformBuild
-    - uses: actions/upload-artifacts@v1
+    - uses: actions/upload-artifact@v1
       with:
-        name: $BUILD_NAME
-        path: $PROJECT_PATH/build/android 
+        name: ${{ env.BUILD_NAME }}
+        path: ${{ env.PROJECT_PATH }}/build/android 
         
