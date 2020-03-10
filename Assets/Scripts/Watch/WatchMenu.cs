@@ -23,8 +23,6 @@ public class WatchMenu : MonoBehaviour
         m_ModelMenuActive = m_ModelMenu.activeSelf;
         m_SettingsMenuActive = m_SettingsMenu.activeSelf;
         m_EnvironmentMenuActive = m_EnvironmentMenu.activeSelf;
-
-        m_Palette = GetComponentInChildren<VRUIColorPalette>();
     }
 
     public void ToggleModelMenu()

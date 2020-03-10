@@ -50,6 +50,7 @@ public class VRUIColorPalette : MonoBehaviour
 
 	public void UpdateColors ()
 	{
+		
 		// Find all the UI components in the scene and update their colors and themes
 
 		GameObject[] bgs = GameObject.FindGameObjectsWithTag ("VRUIBackground");
@@ -70,15 +71,28 @@ public class VRUIColorPalette : MonoBehaviour
 
 		foreach (GameObject txt in texts) 
 		{
-			txt.GetComponent<Text>().color = isDarkTheme ? textColorDark : textColorLight;
+			if (txt.GetComponent<Text>() != null)
+			{
+				txt.GetComponent<Text>().color = isDarkTheme ? textColorDark : textColorLight;
+			}
+			if (txt.GetComponent<TMPro.TextMeshProUGUI>() != null)
+			{
+				txt.GetComponent<TMPro.TextMeshProUGUI>().color = isDarkTheme ? textColorDark : textColorLight;
+			}
 		}
-
 
 		GameObject[] icons = GameObject.FindGameObjectsWithTag ("VRUIIcon");
 
 		foreach (GameObject ico in icons) 
 		{
-			ico.GetComponent<RawImage>().color = isDarkTheme ? textColorDark : textColorLight;
+			if (ico.GetComponent<RawImage>() != null)
+			{
+				ico.GetComponent<RawImage>().color = isDarkTheme ? textColorDark : textColorLight;
+			}
+			if (ico.GetComponent<Image>() != null)
+			{
+				ico.GetComponent<Image>().color = isDarkTheme ? textColorDark : textColorLight;
+			}
 		}
 
 		GameObject[] outlines = GameObject.FindGameObjectsWithTag ("VRUIOutline");

@@ -9,10 +9,6 @@ public class OvrAvatarHand : OvrAvatarComponent
     public bool isLeftHand = true;
     ovrAvatarHandComponent component = new ovrAvatarHandComponent();
 
-    void Start()
-    {
-    }
-
     void Update()
     {
         if (owner == null)

@@ -57,10 +57,8 @@ public class VRUICheckbox : UnityEngine.UI.Toggle {
 			checkedBG.canvasRenderer.SetAlpha(this.isOn ? 1f : 0f);
 
 		}
-		else 
 		#endif
-			checkmark.CrossFadeAlpha(this.isOn ? 1f : 0f, 0f, true);
 		
+		checkmark.CrossFadeAlpha(this.isOn ? 1f : 0f, 0f, true);
 	}
-
 }

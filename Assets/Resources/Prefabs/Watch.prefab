@@ -104,7 +104,7 @@ Transform:
   m_Children:
   - {fileID: 2137227553567277160}
   m_Father: {fileID: 2239997005848594137}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &6380836245069696638
 MonoBehaviour:
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9422a9ab53cdcab45bf74f4130d086df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Pallete: {fileID: 9127572381267947593}
+  m_Pallete: {fileID: 0}
   m_OVRAvatar: {fileID: 0}
   m_ControllerTooltip: {fileID: 0}
   m_ControllerCheckbox: {fileID: 464930447990157988}
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 3383352738442742876}
   m_Layer: 0
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: VRUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1346,7 +1346,7 @@ Transform:
   m_Children:
   - {fileID: 2204749143709235093}
   m_Father: {fileID: 2239997005848594137}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &2127496676764647679
 GameObject:
@@ -2462,7 +2462,7 @@ GameObject:
   - component: {fileID: 3260427311811813561}
   m_Layer: 0
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: VRUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2753,7 +2753,7 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 3374575007452728073}
   toggleTransition: 1
-  graphic: {fileID: 1508635084365687373}
+  graphic: {fileID: 7961387285265055580}
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
@@ -3578,10 +3578,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8823779285904324884}
   - component: {fileID: 8408158640869436119}
-  - component: {fileID: 1508635084365687373}
+  - component: {fileID: 7961387285265055580}
   m_Layer: 0
   m_Name: Checkmark
-  m_TagString: Untagged
+  m_TagString: VRUIIcon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3613,7 +3613,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5171654200524766189}
   m_CullTransparentMesh: 0
---- !u!114 &1508635084365687373
+--- !u!114 &7961387285265055580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3818,7 +3818,7 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 7870352085185198037}
   toggleTransition: 1
-  graphic: {fileID: 7404451813165489494}
+  graphic: {fileID: 5900130165496483951}
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
@@ -4149,7 +4149,7 @@ GameObject:
   - component: {fileID: 1908851608661663696}
   m_Layer: 0
   m_Name: Label
-  m_TagString: Untagged
+  m_TagString: VRUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4718,7 +4718,7 @@ Transform:
   m_Children:
   - {fileID: 6489770757507549082}
   m_Father: {fileID: 2239997005848594137}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &6417505703284575548
 GameObject:
@@ -4883,7 +4883,7 @@ GameObject:
   - component: {fileID: 4827179877747324799}
   m_Layer: 0
   m_Name: Item Label
-  m_TagString: Untagged
+  m_TagString: VRUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4975,7 +4975,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.0624, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
-  - {fileID: 8944468258122912165}
   - {fileID: 7803750396634402166}
   - {fileID: 6421396223901739616}
   - {fileID: 5944538532206592988}
@@ -5009,10 +5008,10 @@ GameObject:
   m_Component:
   - component: {fileID: 254405056988931260}
   - component: {fileID: 1609806850766510867}
-  - component: {fileID: 7404451813165489494}
+  - component: {fileID: 5900130165496483951}
   m_Layer: 0
   m_Name: Checkmark
-  m_TagString: Untagged
+  m_TagString: VRUIIcon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5044,7 +5043,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6868979065053711912}
   m_CullTransparentMesh: 0
---- !u!114 &7404451813165489494
+--- !u!114 &5900130165496483951
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5288,7 +5287,7 @@ GameObject:
   - component: {fileID: 8674510542043322706}
   m_Layer: 0
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: VRUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5438,7 +5437,7 @@ GameObject:
   - component: {fileID: 7914736261912260360}
   m_Layer: 0
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: VRUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5885,7 +5884,7 @@ GameObject:
   - component: {fileID: 7914202023781917790}
   m_Layer: 0
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: VRUIText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6334,7 +6333,7 @@ Transform:
   m_Children:
   - {fileID: 8025322685289537174}
   m_Father: {fileID: 2239997005848594137}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &8004974345318580273
 GameObject:
@@ -6765,56 +6764,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickOnPointerCollision: 0
   autoActivateWithinDistance: 0
---- !u!1 &9167386990177516185
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8944468258122912165}
-  - component: {fileID: 9127572381267947593}
-  m_Layer: 0
-  m_Name: VRUI-Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8944468258122912165
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9167386990177516185}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2239997005848594137}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &9127572381267947593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9167386990177516185}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45c40ac234a3eff468c867fc55d39280, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDarkTheme: 1
-  accentColor: {r: 0, g: 0, b: 0, a: 0}
-  hoverColor: {r: 0.4509804, g: 0.9098039, b: 1, a: 1}
-  pressedColor: {r: 0, g: 0.5254902, b: 0.7647059, a: 1}
-  disabledColor: {r: 0.7411765, g: 0.7411765, b: 0.7411765, a: 1}
