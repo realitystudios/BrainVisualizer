@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d881e962d099f4a8eb492ef7e9a8c0, type: 3}
   m_Name: OculusPlatformSettings
   m_EditorClassIdentifier: 
-  ovrAppID: 2300216600021350
-  ovrMobileAppID: 2300216600021350
+  ovrAppID: 2089488387803211
+  ovrMobileAppID: 2089488387803211
   ovrUseStandalonePlatform: 0
-  ovrEnableARM64Support: 0

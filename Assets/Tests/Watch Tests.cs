@@ -10,18 +10,24 @@ namespace Tests
     {
         Smartwatch m_Watch;
         WatchMenu m_WatchMenu;
+        VRUIColorPalette m_Palette;
+        OvrAvatar m_OvrAvatar;
 
         [SetUp]
         [UnitySetUp]
         public void Setup()
         {
             Camera camera = new GameObject().AddComponent<Camera>();
+            m_Palette = new GameObject().AddComponent<VRUIColorPalette>();
+            m_OvrAvatar = new GameObject().AddComponent<OvrAvatar>();
 
             m_Watch = Object.Instantiate(Resources.Load<GameObject>("Prefabs/Watch")).GetComponent<Smartwatch>();
-
-            m_WatchMenu = m_Watch.GetComponentInChildren<WatchMenu>();
+            m_Watch.GetComponentInChildren<SettingsManager>(true).ColourPalette = m_Palette;
+            m_Watch.GetComponentInChildren<SettingsManager>(true).OvrAvatar = m_OvrAvatar;
+            m_WatchMenu = m_Watch.GetComponentInChildren<WatchMenu>(true);
+            m_WatchMenu.ColourPalette = m_Palette;
             
-            foreach (var canvas in m_WatchMenu.GetComponentsInChildren<Canvas>())
+            foreach (var canvas in m_WatchMenu.GetComponentsInChildren<Canvas>(true))
             {
                 canvas.worldCamera = camera;
             }
@@ -30,27 +36,54 @@ namespace Tests
         [Test]
         public void Watch_ToggleMenu()
         {
+            bool active = m_Watch.gameObject.activeSelf;
+            
             m_Watch.ToggleMenu();
-
-            Assert.That(m_WatchMenu.gameObject.activeSelf == false);
+            Assert.That(m_WatchMenu.gameObject.activeSelf == active);
 
             m_Watch.ToggleMenu();
-
-            Assert.That(m_WatchMenu.gameObject.activeSelf == true);
+            Assert.That(m_WatchMenu.gameObject.activeSelf == !active);
         }
 
         [Test]
         public void Watch_ToggleModelMenu()
         {
-            GameObject modelMenu = m_WatchMenu.transform.Find("VRUI-GridMenu").gameObject;
+            Debug.Log(m_WatchMenu);
+            GameObject modelMenu = m_WatchMenu.transform.Find("VRUI-GridMenu (Model)").gameObject;
+            Debug.Log(modelMenu);
+            bool active = modelMenu.activeSelf;
 
             m_WatchMenu.ToggleModelMenu();
-
-            Assert.That(modelMenu.activeSelf == false);
+            Assert.That(modelMenu.activeSelf == !active);
 
             m_WatchMenu.ToggleModelMenu();
+            Assert.That(modelMenu.activeSelf == active);
+        }
 
-            Assert.That(modelMenu.activeSelf == true);
+        [Test]
+        public void Watch_ToggleEnvironmentsMenu()
+        {
+            GameObject modelMenu = m_WatchMenu.transform.Find("VRUI-RadioPanel (Environments)").gameObject;
+            bool active = modelMenu.activeSelf;
+
+            m_WatchMenu.ToggleEnvironmentMenu();
+            Assert.That(modelMenu.activeSelf == !active);
+
+            m_WatchMenu.ToggleEnvironmentMenu();
+            Assert.That(modelMenu.activeSelf == active);
+        }
+
+        [Test]
+        public void Watch_ToggleSettingsMenu()
+        {
+            GameObject modelMenu = m_WatchMenu.transform.Find("VRUI-CheckListPanel (Settings)").gameObject;
+            bool active = modelMenu.activeSelf;
+
+            m_WatchMenu.ToggleSettingsMenu();
+            Assert.That(modelMenu.activeSelf == !active);
+
+            m_WatchMenu.ToggleSettingsMenu();
+            Assert.That(modelMenu.activeSelf == active);
         }
 
         [TearDown]
@@ -58,6 +91,8 @@ namespace Tests
         public void TearDown()
         {
             Object.Destroy(m_Watch);
+            Object.Destroy(m_Palette);
+            Object.Destroy(m_OvrAvatar);
         }
     }
 }

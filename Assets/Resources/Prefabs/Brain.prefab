@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 54371823457880530}
   - component: {fileID: 114244495187181466}
   - component: {fileID: 114600801809605954}
-  - component: {fileID: 114712416868434672}
   - component: {fileID: 114647010374666792}
   - component: {fileID: 114709623992432350}
   - component: {fileID: 82338075980370796}
-  - component: {fileID: 114304379435837480}
+  - component: {fileID: 3195616638747846869}
+  - component: {fileID: 1357285771931015017}
   m_Layer: 0
   m_Name: Temporal Lobe right
   m_TagString: Interactable
@@ -75,6 +75,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -98,7 +99,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300010, guid: 708f4d4c2927a3a428115d41575872e3, type: 3}
 --- !u!54 &54371823457880530
@@ -162,24 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114712416868434672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1042678381591528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114647010374666792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,9 +201,9 @@ MonoBehaviour:
     and understood. The hippocampus \nis also located in the temporal lobe and is
     a key region for \nmemory formation, processing and retrieval."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
-  m_TooltipOffset: {x: 3, y: -5, z: -3}
-  m_TooltipSize: {x: 5500, y: 3000}
-  m_TooltipFontSize: 150
+  m_TooltipOffset: {x: 0, y: 0, z: 0}
+  m_TooltipSize: {x: 2000, y: 1000}
+  m_AudioSource: {fileID: 82338075980370796}
 --- !u!82 &82338075980370796
 AudioSource:
   m_ObjectHideFlags: 0
@@ -317,7 +300,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114304379435837480
+--- !u!114 &3195616638747846869
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -326,13 +309,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1042678381591528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
+--- !u!114 &1357285771931015017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042678381591528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  emissionDarken: 50
-  customMaterial: {fileID: 0}
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1074938211837646
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,11 +353,11 @@ GameObject:
   - component: {fileID: 54952428269542848}
   - component: {fileID: 114160185638944532}
   - component: {fileID: 114743896594220960}
-  - component: {fileID: 114035463063066364}
   - component: {fileID: 114560517147718044}
   - component: {fileID: 114416664346313616}
   - component: {fileID: 82427037262517124}
-  - component: {fileID: 114164375202418560}
+  - component: {fileID: 2593467164599010013}
+  - component: {fileID: 3888618486707500670}
   m_Layer: 0
   m_Name: Frontal Lobe right
   m_TagString: Interactable
@@ -408,6 +413,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -431,7 +437,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300012, guid: 708f4d4c2927a3a428115d41575872e3, type: 3}
 --- !u!54 &54952428269542848
@@ -495,24 +501,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114035463063066364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074938211837646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114560517147718044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -552,9 +540,9 @@ MonoBehaviour:
     input from many different parts of the brain and \ncombines the information to
     allow us to behave and \nrespond in the most socially appropriate way."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
-  m_TooltipOffset: {x: 3, y: -5, z: 3}
-  m_TooltipSize: {x: 5500, y: 3000}
-  m_TooltipFontSize: 150
+  m_TooltipOffset: {x: 0, y: 0, z: 0}
+  m_TooltipSize: {x: 2000, y: 1000}
+  m_AudioSource: {fileID: 82427037262517124}
 --- !u!82 &82427037262517124
 AudioSource:
   m_ObjectHideFlags: 0
@@ -651,7 +639,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114164375202418560
+--- !u!114 &2593467164599010013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -660,13 +648,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1074938211837646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
+--- !u!114 &3888618486707500670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074938211837646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  emissionDarken: 50
-  customMaterial: {fileID: 0}
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1094421902679204
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,11 +692,11 @@ GameObject:
   - component: {fileID: 54590428191471752}
   - component: {fileID: 114231346577467432}
   - component: {fileID: 114388277614845510}
-  - component: {fileID: 114342607484464954}
   - component: {fileID: 114040407204111356}
   - component: {fileID: 114688057873025882}
   - component: {fileID: 82131530149125784}
-  - component: {fileID: 114012549386465754}
+  - component: {fileID: 6076761377519871866}
+  - component: {fileID: 2422563249681020524}
   m_Layer: 0
   m_Name: Pituitary
   m_TagString: Interactable
@@ -742,6 +752,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -765,7 +776,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300008, guid: 708f4d4c2927a3a428115d41575872e3, type: 3}
 --- !u!54 &54590428191471752
@@ -829,24 +840,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114342607484464954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1094421902679204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114040407204111356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -882,9 +875,9 @@ MonoBehaviour:
   m_ObjectName: Pituitary Gland
   m_ObjectDescription: 
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
-  m_TooltipOffset: {x: 3, y: 5, z: 3}
-  m_TooltipSize: {x: 5500, y: 3000}
-  m_TooltipFontSize: 150
+  m_TooltipOffset: {x: 0, y: 0, z: 0}
+  m_TooltipSize: {x: 2000, y: 1000}
+  m_AudioSource: {fileID: 82131530149125784}
 --- !u!82 &82131530149125784
 AudioSource:
   m_ObjectHideFlags: 0
@@ -981,7 +974,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114012549386465754
+--- !u!114 &6076761377519871866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -990,13 +983,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1094421902679204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
+--- !u!114 &2422563249681020524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094421902679204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  emissionDarken: 50
-  customMaterial: {fileID: 0}
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1111903569959712
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,11 +1027,11 @@ GameObject:
   - component: {fileID: 54346258199809192}
   - component: {fileID: 114716582876332812}
   - component: {fileID: 114073420749131242}
-  - component: {fileID: 114530541815424330}
   - component: {fileID: 114572543589709778}
   - component: {fileID: 114414503858081878}
   - component: {fileID: 82051964486680912}
-  - component: {fileID: 114914184221496360}
+  - component: {fileID: 8446591945386203724}
+  - component: {fileID: 7485780659368579342}
   m_Layer: 0
   m_Name: Parietal Lobe left
   m_TagString: Interactable
@@ -1072,6 +1087,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1095,7 +1111,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300016, guid: 708f4d4c2927a3a428115d41575872e3, type: 3}
 --- !u!54 &54346258199809192
@@ -1159,24 +1175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114530541815424330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111903569959712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114572543589709778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1215,9 +1213,9 @@ MonoBehaviour:
     sensory stimuli \nbefore sending this information to the frontal lobe \nto form
     our behavioural response\r"
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
-  m_TooltipOffset: {x: -3, y: 5, z: 3}
-  m_TooltipSize: {x: 5500, y: 3000}
-  m_TooltipFontSize: 150
+  m_TooltipOffset: {x: 0, y: 0, z: 0}
+  m_TooltipSize: {x: 2000, y: 1000}
+  m_AudioSource: {fileID: 82051964486680912}
 --- !u!82 &82051964486680912
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1314,7 +1312,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114914184221496360
+--- !u!114 &8446591945386203724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1323,13 +1321,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1111903569959712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
+--- !u!114 &7485780659368579342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111903569959712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  emissionDarken: 50
-  customMaterial: {fileID: 0}
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1384607073875806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,11 +1365,11 @@ GameObject:
   - component: {fileID: 54111256037574938}
   - component: {fileID: 114080073696864400}
   - component: {fileID: 114269120941552728}
-  - component: {fileID: 114168386372887572}
   - component: {fileID: 114438535797901580}
   - component: {fileID: 114371621811838480}
   - component: {fileID: 82426272889250804}
-  - component: {fileID: 114020241214129862}
+  - component: {fileID: 1842054577913037549}
+  - component: {fileID: 9111935982300917750}
   m_Layer: 0
   m_Name: Corpus Callosum
   m_TagString: Interactable
@@ -1405,6 +1425,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1428,7 +1449,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300014, guid: 708f4d4c2927a3a428115d41575872e3, type: 3}
 --- !u!54 &54111256037574938
@@ -1492,24 +1513,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114168386372887572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384607073875806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114438535797901580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1545,9 +1548,9 @@ MonoBehaviour:
   m_ObjectName: Corpus Callosum
   m_ObjectDescription: 
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
-  m_TooltipOffset: {x: 3, y: 5, z: 3}
-  m_TooltipSize: {x: 5500, y: 3000}
-  m_TooltipFontSize: 150
+  m_TooltipOffset: {x: 0, y: 0, z: 0}
+  m_TooltipSize: {x: 2000, y: 1000}
+  m_AudioSource: {fileID: 82426272889250804}
 --- !u!82 &82426272889250804
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1644,7 +1647,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114020241214129862
+--- !u!114 &1842054577913037549
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1653,13 +1656,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1384607073875806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
+--- !u!114 &9111935982300917750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384607073875806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  emissionDarken: 50
-  customMaterial: {fileID: 0}
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1415482161612266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,11 +1700,11 @@ GameObject:
   - component: {fileID: 54829931526467976}
   - component: {fileID: 114610030150464992}
   - component: {fileID: 114203023979987606}
-  - component: {fileID: 114077544232095742}
   - component: {fileID: 114210677313018338}
   - component: {fileID: 114858165928147054}
   - component: {fileID: 82642034344781148}
-  - component: {fileID: 114262001714508916}
+  - component: {fileID: 8912913814617469786}
+  - component: {fileID: 3422634348988452474}
   m_Layer: 0
   m_Name: Occipital lobe left
   m_TagString: Interactable
@@ -1735,6 +1760,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1758,7 +1784,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300022, guid: 708f4d4c2927a3a428115d41575872e3, type: 3}
 --- !u!54 &54829931526467976
@@ -1822,24 +1848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114077544232095742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415482161612266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114210677313018338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,9 +1887,9 @@ MonoBehaviour:
     of the brain, such \nas the frontal lobe, to allow us to respond to incoming visual
     \ninformation"
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
-  m_TooltipOffset: {x: -3, y: 5, z: -1}
-  m_TooltipSize: {x: 5500, y: 3000}
-  m_TooltipFontSize: 150
+  m_TooltipOffset: {x: 0, y: 0, z: 0}
+  m_TooltipSize: {x: 2000, y: 1000}
+  m_AudioSource: {fileID: 82642034344781148}
 --- !u!82 &82642034344781148
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1978,7 +1986,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114262001714508916
+--- !u!114 &8912913814617469786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1987,13 +1995,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1415482161612266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
+--- !u!114 &3422634348988452474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415482161612266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  emissionDarken: 50
-  customMaterial: {fileID: 0}
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1429985415019220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2065,11 +2095,11 @@ GameObject:
   - component: {fileID: 54739404120288826}
   - component: {fileID: 114927567945044938}
   - component: {fileID: 114637446412082514}
-  - component: {fileID: 114307567264497164}
   - component: {fileID: 114672124773909628}
   - component: {fileID: 114810663895795996}
   - component: {fileID: 82208754533092352}
-  - component: {fileID: 114070894866915066}
+  - component: {fileID: 5316358156520754119}
+  - component: {fileID: 8219996627834727981}
   m_Layer: 0
   m_Name: brain stem
   m_TagString: Interactable
@@ -2125,6 +2155,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2148,7 +2179,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300006, guid: 708f4d4c2927a3a428115d41575872e3, type: 3}
 --- !u!54 &54739404120288826
@@ -2212,24 +2243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114307567264497164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439319730594342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114672124773909628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2269,9 +2282,9 @@ MonoBehaviour:
     and breathing. \nPons: controls many automatic bodily functions such as\ncontrolling
     sleep/wake cycles."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
-  m_TooltipOffset: {x: -3, y: 0, z: -3}
-  m_TooltipSize: {x: 5500, y: 3000}
-  m_TooltipFontSize: 150
+  m_TooltipOffset: {x: -2, y: 0, z: -2}
+  m_TooltipSize: {x: 2000, y: 1000}
+  m_AudioSource: {fileID: 82208754533092352}
 --- !u!82 &82208754533092352
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2368,7 +2381,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114070894866915066
+--- !u!114 &5316358156520754119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2377,13 +2390,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1439319730594342}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
+--- !u!114 &8219996627834727981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439319730594342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  emissionDarken: 50
-  customMaterial: {fileID: 0}
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1443833615752606
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,11 +2434,11 @@ GameObject:
   - component: {fileID: 54750554222035776}
   - component: {fileID: 114323770645039656}
   - component: {fileID: 114158559519652244}
-  - component: {fileID: 114906823437516078}
   - component: {fileID: 114632661658963822}
   - component: {fileID: 114538866191226792}
   - component: {fileID: 82139407952866436}
-  - component: {fileID: 114700596516829702}
+  - component: {fileID: 5156502048819219973}
+  - component: {fileID: 516873591778893571}
   m_Layer: 0
   m_Name: Cerebellum
   m_TagString: Interactable
@@ -2459,6 +2494,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2482,7 +2518,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300004, guid: 708f4d4c2927a3a428115d41575872e3, type: 3}
 --- !u!54 &54750554222035776
@@ -2546,24 +2582,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114906823437516078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443833615752606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114632661658963822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2603,9 +2621,9 @@ MonoBehaviour:
     total brain size, it contains \nabout 50% of the total number of neurons in the
     brain.\r"
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
-  m_TooltipOffset: {x: -2, y: 0, z: -5}
-  m_TooltipSize: {x: 5500, y: 3000}
-  m_TooltipFontSize: 150
+  m_TooltipOffset: {x: 0, y: 0, z: 0}
+  m_TooltipSize: {x: 2000, y: 1000}
+  m_AudioSource: {fileID: 82139407952866436}
 --- !u!82 &82139407952866436
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2702,7 +2720,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114700596516829702
+--- !u!114 &5156502048819219973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2711,13 +2729,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1443833615752606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
+--- !u!114 &516873591778893571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443833615752606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  emissionDarken: 50
-  customMaterial: {fileID: 0}
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1657260740043670
 GameObject:
   m_ObjectHideFlags: 0
@@ -2733,11 +2773,11 @@ GameObject:
   - component: {fileID: 54335019812783626}
   - component: {fileID: 114790669084891040}
   - component: {fileID: 114602617675231182}
-  - component: {fileID: 114108210908844458}
   - component: {fileID: 114129246993275598}
   - component: {fileID: 114208207557410216}
   - component: {fileID: 82536978930719240}
-  - component: {fileID: 114259659092935574}
+  - component: {fileID: 290466994266427078}
+  - component: {fileID: 8887138146589063260}
   m_Layer: 0
   m_Name: Occipital lobe right
   m_TagString: Interactable
@@ -2793,6 +2833,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2816,7 +2857,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300020, guid: 708f4d4c2927a3a428115d41575872e3, type: 3}
 --- !u!54 &54335019812783626
@@ -2880,24 +2921,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114108210908844458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1657260740043670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114129246993275598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2937,9 +2960,9 @@ MonoBehaviour:
     of the brain, such \nas the frontal lobe, to allow us to respond to incoming visual
     \ninformation"
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
-  m_TooltipOffset: {x: -3, y: -5, z: -1}
-  m_TooltipSize: {x: 5500, y: 3000}
-  m_TooltipFontSize: 150
+  m_TooltipOffset: {x: 0, y: 0, z: 0}
+  m_TooltipSize: {x: 2000, y: 1000}
+  m_AudioSource: {fileID: 82536978930719240}
 --- !u!82 &82536978930719240
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3036,7 +3059,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114259659092935574
+--- !u!114 &290466994266427078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3045,13 +3068,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1657260740043670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
+--- !u!114 &8887138146589063260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657260740043670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  emissionDarken: 50
-  customMaterial: {fileID: 0}
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1807180932852238
 GameObject:
   m_ObjectHideFlags: 0
@@ -3067,11 +3112,11 @@ GameObject:
   - component: {fileID: 54801691829905366}
   - component: {fileID: 114355866815995488}
   - component: {fileID: 114678794456609408}
-  - component: {fileID: 114228338256330778}
   - component: {fileID: 114625374462630494}
   - component: {fileID: 114314734709589044}
   - component: {fileID: 82278528646949082}
-  - component: {fileID: 114399037850770440}
+  - component: {fileID: 8554282694343739922}
+  - component: {fileID: 7317408824214058501}
   m_Layer: 0
   m_Name: Frontal Lobe left
   m_TagString: Interactable
@@ -3127,6 +3172,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3150,7 +3196,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 708f4d4c2927a3a428115d41575872e3, type: 3}
 --- !u!54 &54801691829905366
@@ -3214,24 +3260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114228338256330778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807180932852238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114625374462630494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3271,9 +3299,9 @@ MonoBehaviour:
     input from many different parts of the brain and \ncombines the information to
     allow us to behave and \nrespond in the most socially appropriate way."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
-  m_TooltipOffset: {x: 3, y: 5, z: 3}
-  m_TooltipSize: {x: 5500, y: 3000}
-  m_TooltipFontSize: 150
+  m_TooltipOffset: {x: 0, y: 0, z: 0}
+  m_TooltipSize: {x: 2000, y: 1000}
+  m_AudioSource: {fileID: 82278528646949082}
 --- !u!82 &82278528646949082
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3370,7 +3398,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114399037850770440
+--- !u!114 &8554282694343739922
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3379,13 +3407,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1807180932852238}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
+--- !u!114 &7317408824214058501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807180932852238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  emissionDarken: 50
-  customMaterial: {fileID: 0}
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1943727828652786
 GameObject:
   m_ObjectHideFlags: 0
@@ -3401,11 +3451,11 @@ GameObject:
   - component: {fileID: 54697434939057526}
   - component: {fileID: 114195413101041744}
   - component: {fileID: 114646832372518970}
-  - component: {fileID: 114958158113107324}
   - component: {fileID: 114282691518119088}
   - component: {fileID: 114164706651544894}
   - component: {fileID: 82088876413051868}
-  - component: {fileID: 114075815876011786}
+  - component: {fileID: 5747825138434630339}
+  - component: {fileID: 4282948988639636579}
   m_Layer: 0
   m_Name: Temporal Lobe left
   m_TagString: Interactable
@@ -3461,6 +3511,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3484,7 +3535,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300002, guid: 708f4d4c2927a3a428115d41575872e3, type: 3}
 --- !u!54 &54697434939057526
@@ -3548,24 +3599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114958158113107324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943727828652786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114282691518119088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3604,9 +3637,9 @@ MonoBehaviour:
     and understood. The hippocampus \nis also located in the temporal lobe and is
     a key region for \nmemory formation, processing and retrieval."
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
-  m_TooltipOffset: {x: 3, y: 5, z: -3}
-  m_TooltipSize: {x: 5500, y: 3000}
-  m_TooltipFontSize: 150
+  m_TooltipOffset: {x: 0, y: 0, z: 0}
+  m_TooltipSize: {x: 2000, y: 1000}
+  m_AudioSource: {fileID: 82088876413051868}
 --- !u!82 &82088876413051868
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3703,7 +3736,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114075815876011786
+--- !u!114 &5747825138434630339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3712,13 +3745,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1943727828652786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
+--- !u!114 &4282948988639636579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943727828652786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  emissionDarken: 50
-  customMaterial: {fileID: 0}
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0
 --- !u!1 &1986131634721656
 GameObject:
   m_ObjectHideFlags: 0
@@ -3734,11 +3789,11 @@ GameObject:
   - component: {fileID: 54605388549763430}
   - component: {fileID: 114970352723862028}
   - component: {fileID: 114703550260671260}
-  - component: {fileID: 114862543496880024}
   - component: {fileID: 114492210454581280}
   - component: {fileID: 114284830206873450}
   - component: {fileID: 82904752210196698}
-  - component: {fileID: 114410361990174118}
+  - component: {fileID: 7549526805419389978}
+  - component: {fileID: 5296236824600242080}
   m_Layer: 0
   m_Name: Parietal Lobe right
   m_TagString: Interactable
@@ -3794,6 +3849,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3817,7 +3873,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300018, guid: 708f4d4c2927a3a428115d41575872e3, type: 3}
 --- !u!54 &54605388549763430
@@ -3881,24 +3937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114862543496880024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1986131634721656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  precisionGrab: 1
-  rightSnapHandle: {fileID: 0}
-  leftSnapHandle: {fileID: 0}
-  throwVelocityWithAttachDistance: 0
-  throwMultiplier: 1
-  onGrabCollisionDelay: 0
 --- !u!114 &114492210454581280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3937,9 +3975,9 @@ MonoBehaviour:
     sensory stimuli \nbefore sending this information to the frontal lobe \nto form
     our behavioural response\r"
   m_Tooltip: {fileID: 1765219496739344, guid: d4f5eae0fa9d4e34a84668e0a1d87748, type: 3}
-  m_TooltipOffset: {x: -3, y: -5, z: 3}
-  m_TooltipSize: {x: 5500, y: 3000}
-  m_TooltipFontSize: 150
+  m_TooltipOffset: {x: 0, y: 0, z: 0}
+  m_TooltipSize: {x: 2000, y: 1000}
+  m_AudioSource: {fileID: 82904752210196698}
 --- !u!82 &82904752210196698
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4036,7 +4074,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114410361990174118
+--- !u!114 &7549526805419389978
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4045,10 +4083,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 1986131634721656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc366c4ab9b63a4dad97fc1290dc00a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
+--- !u!114 &5296236824600242080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986131634721656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08517e04830d6d44a13c5ea5f574181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
   unhighlightOnDisable: 1
-  emissionDarken: 50
-  customMaterial: {fileID: 0}
+  thickness: 1
+  customOutlineModels: []
+  customOutlineModelPaths: []
+  enableSubmeshHighlight: 0

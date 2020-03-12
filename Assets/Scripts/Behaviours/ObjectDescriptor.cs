@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
+using TMPro;
 
 [RequireComponent(typeof(AudioSource))]
 public class ObjectDescriptor : MonoBehaviour {
@@ -20,30 +21,39 @@ public class ObjectDescriptor : MonoBehaviour {
     private Vector3 m_TooltipOffset;
     [SerializeField, Tooltip("Size of the tooltip")]
     private Vector2 m_TooltipSize;
-    [SerializeField]
-    private int m_TooltipFontSize;
 
     private ObjectTooltip m_CurrentTooltip;
+    private Vector3 m_TooltipLineEnd;
+
+    [SerializeField]
+    private AudioSource m_AudioSource;
+
+    public string ObjectName { get { return m_ObjectName; } }
+    public string ObjectDescription { get { return m_ObjectDescription; } }
 
     protected void OnEnable()
     {
-        if (GetComponent<VRTK_InteractableObject>() != null)
+        /*if (GetComponent<VRTK_InteractableObject>() != null)
         {
             GetComponent<VRTK_InteractableObject>().InteractableObjectUsed += InteractableObjectUsed;
             GetComponent<VRTK_InteractableObject>().InteractableObjectUnused += InteractableObjectUnused;
         }
+
+        m_TooltipLineEnd = GetComponent<Renderer>().bounds.center;*/
+
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     protected virtual void OnDisable()
     {
-        if (GetComponent<VRTK_InteractableObject>() != null)
+        /*if (GetComponent<VRTK_InteractableObject>() != null)
         {
             GetComponent<VRTK_InteractableObject>().InteractableObjectUsed -= InteractableObjectUsed;
             GetComponent<VRTK_InteractableObject>().InteractableObjectUnused -= InteractableObjectUnused;
-        }
+        }*/
     }
 
-    protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
+    /*protected virtual void InteractableObjectUsed(object sender, InteractableObjectEventArgs e)
     {
         if (m_CurrentTooltip == null)
         {
@@ -73,17 +83,22 @@ public class ObjectDescriptor : MonoBehaviour {
 
             m_CurrentTooltip.transform.localPosition = m_TooltipOffset;
             m_CurrentTooltip.containerSize = m_TooltipSize;
-            m_CurrentTooltip.fontSize = m_TooltipFontSize;
             m_CurrentTooltip.alwaysFaceHeadset = true;
-            m_CurrentTooltip.drawLineFrom = m_CurrentTooltip.transform;
-            m_CurrentTooltip.drawLineTo = transform;
 
-            m_CurrentTooltip.UpdateText(m_ObjectName + '\n' + m_ObjectDescription);
+            m_CurrentTooltip.UpdateText(m_ObjectName, m_ObjectDescription);
 
-            if (GetComponent<AudioSource>().clip != null)
-            {
-                GetComponent<AudioSource>().Play();
-            }
+            m_CurrentTooltip.Button.onClick.AddListener(() => {
+                if (m_AudioSource.isPlaying)
+                {
+                    m_AudioSource.Stop();
+                    m_CurrentTooltip.Button.GetComponentInChildren<TextMeshProUGUI>().text = "Play";
+                } 
+                else
+                {
+                    PlayAudio();
+                    m_CurrentTooltip.Button.GetComponentInChildren<TextMeshProUGUI>().text = "Stop";
+                }
+            });
         }
         else
         {
@@ -98,11 +113,21 @@ public class ObjectDescriptor : MonoBehaviour {
 
         if (m_CurrentTooltip != null)
             Destroy(m_CurrentTooltip.gameObject);
-    }
+    }*/
 
     public void PlayAudio()
     {
-        if (GetComponent<AudioSource>().clip != null)
-            GetComponent<AudioSource>().Play();   
+        if (m_AudioSource.clip != null)
+        {
+            m_AudioSource.Play();   
+        }
+    }
+
+    public void StopAudio()
+    {
+        if (m_AudioSource.clip != null)
+        {
+            m_AudioSource.Stop();
+        }
     }
 }

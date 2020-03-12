@@ -1,0 +1,49 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Unity - Testing
+env:
+  BUILD_NAME: BrainViz
+  TARGET_PLATFORM: Android
+  UNITY_VERSION: 2019.2.21f1
+  PROJECT_PATH: BrainVisualizer
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+# Controls when the action will run. Triggers the workflow on push or pull request 
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+    
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # Runs the Unity's Testing Suite
+  test:
+    name: Run Unity Testing Suite
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        testMode:
+          - playmode
+          - editmode
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          lfs: true
+      - uses: actions/cache@v1.1.0
+        with:
+          path: Library
+          key: Library
+      - name: Unity - Test
+        id: tests
+        uses: webbertakken/unity-test-runner@v1.5
+        with: 
+          unityVersion: ${{ env.UNITY_VERSION }}
+          testMode: ${{ matrix.testMode }}
+          artifactsPath: ${{ matrix.testMode }}-artifacts
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${{ env.BUILD_NAME }}_${{ matrix.testMode }}_results
+          path: ${{ steps.tests.outputs.artifactsPath }}

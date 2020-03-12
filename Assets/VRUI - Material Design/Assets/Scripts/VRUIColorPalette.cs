@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class VRUIColorPalette : MonoBehaviour
 {
+	public static VRUIColorPalette Instance;
+
 	public bool isDarkTheme = true;
 
 	// Colors from GUI
@@ -32,18 +34,23 @@ public class VRUIColorPalette : MonoBehaviour
 	private Color accentUILight = new Color(0f, 0f, 0f, 0.0f); 
 	private Color hoverUILight = new Color(0f, 0f, 0f, 0.1f); 
 	private Color pressedUILight = new Color(0f, 0f, 0f, 0.2f); 
-	private Color disabledUILight = new Color(0f, 0f, 0f, 0.05f); 
+	private Color disabledUILight = new Color(0f, 0f, 0f, 0.05f);
 
-	void Awake () {
+
+	void Awake() {
 
 		// Update colors on wakeup
+		if (Instance == null)
+		{
+			Instance = this;
+		}
 
 		UpdateColors ();
-
 	}
 
 	public void UpdateColors ()
 	{
+		
 		// Find all the UI components in the scene and update their colors and themes
 
 		GameObject[] bgs = GameObject.FindGameObjectsWithTag ("VRUIBackground");
@@ -64,15 +71,28 @@ public class VRUIColorPalette : MonoBehaviour
 
 		foreach (GameObject txt in texts) 
 		{
-			txt.GetComponent<Text>().color = isDarkTheme ? textColorDark : textColorLight;
+			if (txt.GetComponent<Text>() != null)
+			{
+				txt.GetComponent<Text>().color = isDarkTheme ? textColorDark : textColorLight;
+			}
+			if (txt.GetComponent<TMPro.TextMeshProUGUI>() != null)
+			{
+				txt.GetComponent<TMPro.TextMeshProUGUI>().color = isDarkTheme ? textColorDark : textColorLight;
+			}
 		}
-
 
 		GameObject[] icons = GameObject.FindGameObjectsWithTag ("VRUIIcon");
 
 		foreach (GameObject ico in icons) 
 		{
-			ico.GetComponent<RawImage>().color = isDarkTheme ? textColorDark : textColorLight;
+			if (ico.GetComponent<RawImage>() != null)
+			{
+				ico.GetComponent<RawImage>().color = isDarkTheme ? textColorDark : textColorLight;
+			}
+			if (ico.GetComponent<Image>() != null)
+			{
+				ico.GetComponent<Image>().color = isDarkTheme ? textColorDark : textColorLight;
+			}
 		}
 
 		GameObject[] outlines = GameObject.FindGameObjectsWithTag ("VRUIOutline");
@@ -172,6 +192,13 @@ public class VRUIColorPalette : MonoBehaviour
 		foreach (GameObject slide in sliders) 
 		{
 			slide.GetComponent<VRUISlider>().setColors(accentColor);
+		}
+
+		GameObject[] dropdowns = GameObject.FindGameObjectsWithTag("VRUIDropdown");
+
+		foreach (GameObject dropdown in dropdowns)
+		{
+			dropdown.GetComponent<VRUIDropdown>().setColors(accentColor);
 		}
 	}
 
