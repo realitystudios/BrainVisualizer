@@ -4,6 +4,7 @@ name: Unity - Build
 env:
   BUILD_NAME: BrainViz
   TARGET_PLATFORM: Android
+  BUILD_PATH: build/${{ env.TARGET_PLATFORM }}
   UNITY_VERSION: 2019.2.21f1
   PROJECT_PATH: BrainVisualizer
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -39,11 +40,11 @@ jobs:
         unityVersion: ${{ env.UNITY_VERSION }}
         targetPlatform: ${{ env.TARGET_PLATFORM }}
         buildName: ${{ env.BUILD_NAME }}
-        buildsPath: build
+        buildsPath: ${{ env.BUILD_PATH }}
         buildMethod: BuildCommand.PerformBuild
         customParameters: -nographics
     - uses: actions/upload-artifact@v1
       with:
         name: ${{ env.BUILD_NAME }}
-        path: build
+        path: ${{ env.BUILD_PATH }}
         
