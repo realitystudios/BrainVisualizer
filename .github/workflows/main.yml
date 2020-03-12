@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Unity - Test & Build
+name: Unity - Build
 env:
   BUILD_NAME: BrainViz
   TARGET_PLATFORM: Android
@@ -14,36 +14,7 @@ on:
     branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # Runs the Unity's Testing Suite
-  test:
-    name: Run Unity Testing Suite
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        testMode:
-          - playMode
-          - editMode
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          lfs: true
-      - uses: actions/cache@v1.1.0
-        with:
-          path: ${{ env.PROJECT_PATH }}/Library
-          key: Library
-      - name: Unity - Test
-        id: testProject
-        uses: webbertakken/unity-test-runner@v1.5
-        with: 
-          unityVersion: ${{ env.UNITY_VERSION }}
-      - name: Upload Test Results
-        uses: actions/upload-artifact@v1
-        with:
-          name: ${{ env.BUILD_NAME }}_${{ matrix.testMode }}_results
-          path: ${{ steps.testProject.output.artifactsPath }}
-        
+jobs:  
   # Builds the Unity Project
   build:
     name: Build Unity Project
@@ -55,10 +26,10 @@ jobs:
         lfs: true
     - uses: actions/cache@v1.1.0
       with:
-        path: ${{ env.PROJECT_PATH }}/Library
-        key: Library-${{ env.PROJECT_PATH }}-${{ env.TARGET_PLATFORM }}
+        path: Library
+        key: Library-${{ env.BUILD_NAME }}-${{ env.TARGET_PLATFORM }}
         restore-keys: |
-          Library-${{ env.PROJECT_PATH }}-
+          Library-${{ env.BUILD_NAME }}-
           Library-
     - name: Unity - Build
       uses: webbertakken/unity-builder@v0.11
@@ -66,10 +37,10 @@ jobs:
         unityVersion: ${{ env.UNITY_VERSION }}
         targetPlatform: ${{ env.TARGET_PLATFORM }}
         buildName: ${{ env.BUILD_NAME }}
-        buildsPath: ${{ env.PROJECT_PATH }}/build/android
+        buildsPath: build/android
         buildMethod: BuildCommand.PerformBuild
     - uses: actions/upload-artifact@v1
       with:
         name: ${{ env.BUILD_NAME }}
-        path: ${{ env.PROJECT_PATH }}/build/android 
+        path: build/android 
         

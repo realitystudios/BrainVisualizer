@@ -5,7 +5,7 @@ using UnityEngine;
 public class SettingsManager : MonoBehaviour
 {
     [SerializeField]
-    private VRUIColorPalette m_Pallete;
+    private VRUIColorPalette m_Palette;
     [SerializeField]
     private OvrAvatar m_OVRAvatar;
     [SerializeField]
@@ -16,10 +16,16 @@ public class SettingsManager : MonoBehaviour
     [SerializeField]
     private VRUICheckbox m_DarkModeCheckbox;
 
+    public VRUIColorPalette ColourPalette { get { return m_Palette; } set { m_Palette = value; } }
+    public OvrAvatar OvrAvatar { get { return m_OVRAvatar; } set { m_OVRAvatar = value; } }
+
     private void Start()
     {
+        Debug.Log(m_Palette);
+        Debug.Log(m_OVRAvatar);
+
         m_DarkModeCheckbox.onValueChanged.AddListener((state) => { ToggleDarkMode(state); }) ;
-        m_DarkModeCheckbox.isOn = m_Pallete.isDarkTheme;
+        m_DarkModeCheckbox.isOn = m_Palette.isDarkTheme;
 
         m_ControllerCheckbox.onValueChanged.AddListener((state) => { ToggleControllers(state); });
         m_ControllerCheckbox.isOn = m_OVRAvatar.StartWithControllers;
@@ -27,8 +33,11 @@ public class SettingsManager : MonoBehaviour
 
     public void ToggleDarkMode(bool state)
     {
-        m_Pallete.isDarkTheme = state;
-        m_Pallete.UpdateColors();
+        if (m_Palette)
+        {
+            m_Palette.isDarkTheme = state;
+            m_Palette.UpdateColors();
+        }
     }
 
     public void ToggleControllers(bool state)

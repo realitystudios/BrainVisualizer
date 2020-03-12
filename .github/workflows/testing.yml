@@ -10,6 +10,8 @@ env:
 # Controls when the action will run. Triggers the workflow on push or pull request 
 # events but only for the master branch
 on:
+  push:
+    branches: [ master ]
   pull_request:
     branches: [ master ]
     
@@ -23,23 +25,25 @@ jobs:
       fail-fast: false
       matrix:
         testMode:
-          - playMode
-          - editMode
+          - playmode
+          - editmode
     steps:
       - uses: actions/checkout@v2
         with:
           lfs: true
       - uses: actions/cache@v1.1.0
         with:
-          path: ${{ env.PROJECT_PATH }}/Library
+          path: Library
           key: Library
       - name: Unity - Test
-        id: testProject
+        id: tests
         uses: webbertakken/unity-test-runner@v1.5
         with: 
           unityVersion: ${{ env.UNITY_VERSION }}
+          testMode: ${{ matrix.testMode }}
+          artifactsPath: ${{ matrix.testMode }}-artifacts
       - name: Upload Test Results
         uses: actions/upload-artifact@v1
         with:
-          name: $BUILD_NAME_${{ matrix.testMode }}_results
-          path: ${{ steps.testProject.output.artifactsPath }}
+          name: ${{ env.BUILD_NAME }}_${{ matrix.testMode }}_results
+          path: ${{ steps.tests.outputs.artifactsPath }}

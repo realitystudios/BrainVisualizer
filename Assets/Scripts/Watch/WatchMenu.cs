@@ -18,6 +18,8 @@ public class WatchMenu : MonoBehaviour
     private bool m_SettingsMenuActive;
     private bool m_EnvironmentMenuActive;
 
+    public VRUIColorPalette ColourPalette { get { return m_Palette; } set { m_Palette = value; } }
+
     private void Start()
     {
         m_ModelMenuActive = m_ModelMenu.activeSelf;

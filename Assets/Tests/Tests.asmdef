@@ -1,16 +1,23 @@
 {
     "name": "Tests",
     "references": [
-        "BrainViz.Scripts"
-    ],
-    "optionalUnityReferences": [
-        "TestAssemblies"
+        "BrainViz.Scripts",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "VRUI.Scripts",
+        "Oculus",
+        "Oculus.VR"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": []
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": []
 }
