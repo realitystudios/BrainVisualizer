@@ -43,6 +43,6 @@ jobs:
         buildMethod: BuildCommand.PerformBuild
     - uses: actions/upload-artifact@v1
       with:
-        name: ${{ steps.build.outputs.buildName }}
-        path: ${{ steps.build.outputs.buildsPath }}
+        name: ${{ env.BUILD_NAME }}
+        path: build
         
