@@ -39,10 +39,11 @@ jobs:
         unityVersion: ${{ env.UNITY_VERSION }}
         targetPlatform: ${{ env.TARGET_PLATFORM }}
         buildName: ${{ env.BUILD_NAME }}
-        buildsPath: build
+        buildsPath: ${{ env.PROJECT_PATH }}/build
         buildMethod: BuildCommand.PerformBuild
+        customParameters: -nographics
     - uses: actions/upload-artifact@v1
       with:
         name: ${{ env.BUILD_NAME }}
-        path: build
+        path: ${{ env.PROJECT_PATH}}/build
         
