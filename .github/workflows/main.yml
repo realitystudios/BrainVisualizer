@@ -3,7 +3,6 @@
 name: Unity - Build
 env:
   BUILD_NAME: BrainViz
-  TARGET_PLATFORM: Android
   UNITY_VERSION: 2019.2.21f1
   PROJECT_PATH: BrainVisualizer
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -19,6 +18,12 @@ jobs:
   build:
     name: Build Unity Project
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        targetPlatform:
+        - Android
+        - StandaloneWindows64
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
@@ -37,7 +42,7 @@ jobs:
       uses: webbertakken/unity-builder@v0.11
       with:
         unityVersion: ${{ env.UNITY_VERSION }}
-        targetPlatform: ${{ env.TARGET_PLATFORM }}
+        targetPlatform: ${{ matrix.targetPlatform }}
         buildName: ${{ env.BUILD_NAME }}
         buildsPath: build/
         buildMethod: BuildCommand.PerformBuild
@@ -45,5 +50,5 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: ${{ env.BUILD_NAME }}
-        path: build/${{ env.TARGET_PLATFORM }}
+        path: build/${{ matrix.targetPlatform }}
         
