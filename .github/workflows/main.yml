@@ -29,18 +29,20 @@ jobs:
         path: Library
         key: Library-${{ env.BUILD_NAME }}-${{ env.TARGET_PLATFORM }}
         restore-keys: |
+          Library-${{ env.BUILD_NAME }}-${{ env.TARGET_PLATFORM }}
           Library-${{ env.BUILD_NAME }}-
           Library-
     - name: Unity - Build
+      id: build
       uses: webbertakken/unity-builder@v0.11
       with:
         unityVersion: ${{ env.UNITY_VERSION }}
         targetPlatform: ${{ env.TARGET_PLATFORM }}
         buildName: ${{ env.BUILD_NAME }}
-        buildsPath: build/android
+        buildsPath: build
         buildMethod: BuildCommand.PerformBuild
     - uses: actions/upload-artifact@v1
       with:
-        name: ${{ env.BUILD_NAME }}
-        path: build/android 
+        name: ${{ steps.build.outputs.buildName }}
+        path: ${{ steps.build.outputs.buildsPath }}
         
