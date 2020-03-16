@@ -5,38 +5,47 @@ using UnityEngine;
 public class SettingsManager : MonoBehaviour
 {
     [SerializeField]
-    private VRUIColorPalette m_Palette;
-    [SerializeField]
     private OvrAvatar m_OVRAvatar;
+
     [SerializeField]
     private GameObject m_ControllerTooltip;
 
     [SerializeField]
     private VRUICheckbox m_ControllerCheckbox;
+    
     [SerializeField]
     private VRUICheckbox m_DarkModeCheckbox;
 
-    public VRUIColorPalette ColourPalette { get { return m_Palette; } set { m_Palette = value; } }
     public OvrAvatar OvrAvatar { get { return m_OVRAvatar; } set { m_OVRAvatar = value; } }
 
     private void Start()
     {
-        Debug.Log(m_Palette);
-        Debug.Log(m_OVRAvatar);
-
+        m_OVRAvatar = FindObjectOfType<OvrAvatar>();
+        
         m_DarkModeCheckbox.onValueChanged.AddListener((state) => { ToggleDarkMode(state); }) ;
-        m_DarkModeCheckbox.isOn = m_Palette.isDarkTheme;
-
+        StartCoroutine(SetDarkMode());
         m_ControllerCheckbox.onValueChanged.AddListener((state) => { ToggleControllers(state); });
+        StartCoroutine(SetControllerState());
+    }
+
+    private IEnumerator SetDarkMode()
+    {
+        yield return new WaitUntil(() => VRUIColorPalette.Instance != null);
+        m_DarkModeCheckbox.isOn = VRUIColorPalette.Instance.isDarkTheme;
+    }
+
+    private IEnumerator SetControllerState()
+    {
+        yield return new WaitUntil(() => m_OVRAvatar != null);
         m_ControllerCheckbox.isOn = m_OVRAvatar.StartWithControllers;
     }
 
     public void ToggleDarkMode(bool state)
     {
-        if (m_Palette)
+        if (VRUIColorPalette.Instance)
         {
-            m_Palette.isDarkTheme = state;
-            m_Palette.UpdateColors();
+            VRUIColorPalette.Instance.isDarkTheme = state;
+            VRUIColorPalette.Instance.UpdateColors();
         }
     }
 

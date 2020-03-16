@@ -7,6 +7,10 @@ public class DescriptorZone : MonoBehaviour
     [SerializeField]
     private ObjectTooltip m_Tooltip;
 
+    private void Start(){
+        m_Tooltip.Button.interactable = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         ObjectDescriptor descriptor = other.GetComponent<ObjectDescriptor>();
@@ -17,7 +21,8 @@ public class DescriptorZone : MonoBehaviour
                 m_Tooltip.UpdateText(
                     descriptor.ObjectName, descriptor.ObjectDescription
                 );
-
+    
+                m_Tooltip.Button.interactable = true;
                 m_Tooltip.Button.onClick.AddListener(() => {
                     if (descriptor.GetComponent<AudioSource>().isPlaying)
                     {
@@ -39,6 +44,7 @@ public class DescriptorZone : MonoBehaviour
             {
                 m_Tooltip.UpdateText("", "");
                 m_Tooltip.Button.onClick.RemoveAllListeners();
+                m_Tooltip.Button.interactable = false;
             }
         }
     }

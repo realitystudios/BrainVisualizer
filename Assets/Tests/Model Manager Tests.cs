@@ -18,10 +18,16 @@ namespace Tests
             GameObject brainModel = Resources.Load<GameObject>("Prefabs/Brain");
             GameObject ventricleModel = Resources.Load<GameObject>("Prefabs/Ventricle");
 
-            m_ModelManager.Models = new List<GameObject>()
+            m_ModelManager.Models = new List<ModelManager.ModelData>()
             {
-                brainModel,
-                ventricleModel
+                new ModelManager.ModelData(){
+                    Icon = null, 
+                    Model = brainModel
+                },
+                new ModelManager.ModelData(){
+                    Icon = null,
+                    Model = ventricleModel
+                }
             };
         }
 
@@ -30,7 +36,7 @@ namespace Tests
         {
             m_ModelManager.LoadModel(0);
 
-            Assert.That(m_ModelManager.GetCurrentModel().name, Does.Contain(m_ModelManager.Models[0].name));
+            Assert.That(m_ModelManager.GetCurrentModel().name, Does.Contain(m_ModelManager.Models[0].Model.name));
         }
 
         [Test]
@@ -38,7 +44,7 @@ namespace Tests
         {
             m_ModelManager.ResetCurrentModel();
 
-            Assert.That(m_ModelManager.GetCurrentModel().name, Does.Contain(m_ModelManager.Models[0].name));
+            Assert.That(m_ModelManager.GetCurrentModel().name, Does.Contain(m_ModelManager.Models[0].Model.name));
         }
 
         [TearDown]

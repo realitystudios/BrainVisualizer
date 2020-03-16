@@ -29,6 +29,6 @@ public class ColorList : MonoBehaviour
         GetComponent<VRUIDropdown>().onValueChanged.AddListener((value) => {
             VRUIColorPalette.Instance.accentColor = m_AccentColours[value].colour;
             VRUIColorPalette.Instance.UpdateColors();
-        });        
+        });
     }
 }

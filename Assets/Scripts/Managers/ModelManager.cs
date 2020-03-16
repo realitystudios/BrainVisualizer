@@ -2,16 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class ModelManager : MonoBehaviour {
 
+    [System.Serializable]
+    public struct ModelData{
+        public string Name;
+        public Texture Icon;
+        public GameObject Model;
+    }
+
     [SerializeField]
-    private List<GameObject> m_ModelPrefabs;
+    private List<ModelData> m_ModelPrefabs;
 
     private GameObject m_CurrentModel;
     private int m_CurrentModelIndex = 0;
 
-    public List<GameObject> Models { get { return m_ModelPrefabs; } set { m_ModelPrefabs = value; } }
+    public List<ModelData> Models { get { return m_ModelPrefabs; } set { m_ModelPrefabs = value; } }
 
     public static ModelManager Instance { get; private set; }
 
@@ -30,7 +38,7 @@ public class ModelManager : MonoBehaviour {
 
         if (m_ModelPrefabs == null)
         {
-            m_ModelPrefabs = new List<GameObject>();
+            m_ModelPrefabs = new List<ModelData>();
         }
 
         if (m_ModelPrefabs != null && m_ModelPrefabs.Count > 0)
@@ -47,7 +55,13 @@ public class ModelManager : MonoBehaviour {
     public void ResetCurrentModel()
     {
         DestroyImmediate(m_CurrentModel);   
-        m_CurrentModel = Instantiate(m_ModelPrefabs[m_CurrentModelIndex], transform);
+        m_CurrentModel = Instantiate(m_ModelPrefabs[m_CurrentModelIndex].Model, transform);
+    }
+
+    public void LoadModel(string modelName){
+        LoadModel(m_ModelPrefabs.IndexOf(
+            m_ModelPrefabs.FirstOrDefault((model) => model.Name.Equals(modelName))
+        ));
     }
 
     public void LoadModel(int modelId)
@@ -58,7 +72,7 @@ public class ModelManager : MonoBehaviour {
         }
 
         m_CurrentModelIndex = modelId;
-        m_CurrentModel = Instantiate(m_ModelPrefabs[m_CurrentModelIndex], transform);
-        m_CurrentModel.name = m_ModelPrefabs[m_CurrentModelIndex].name;
+        m_CurrentModel = Instantiate(m_ModelPrefabs[m_CurrentModelIndex].Model, transform);
+        m_CurrentModel.name = m_ModelPrefabs[m_CurrentModelIndex].Model.name;
     }
 }

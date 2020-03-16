@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class WatchMenu : MonoBehaviour
 {
     [SerializeField]
-    private VRUIColorPalette m_Palette;
-    [SerializeField]
     private GameObject m_ModelMenu;
     [SerializeField]
     private GameObject m_SettingsMenu;
@@ -17,8 +15,6 @@ public class WatchMenu : MonoBehaviour
     private bool m_ModelMenuActive;
     private bool m_SettingsMenuActive;
     private bool m_EnvironmentMenuActive;
-
-    public VRUIColorPalette ColourPalette { get { return m_Palette; } set { m_Palette = value; } }
 
     private void Start()
     {
@@ -37,7 +33,7 @@ public class WatchMenu : MonoBehaviour
         m_ModelMenuActive = !m_ModelMenuActive;
         m_ModelMenu.SetActive(m_ModelMenuActive);
 
-        m_Palette.UpdateColors();
+        VRUIColorPalette.Instance.UpdateColors();
     }
 
     public void ToggleEnvironmentMenu()
@@ -50,7 +46,7 @@ public class WatchMenu : MonoBehaviour
         m_EnvironmentMenuActive = !m_EnvironmentMenuActive;
         m_EnvironmentMenu.SetActive(m_EnvironmentMenuActive);
 
-        m_Palette.UpdateColors();
+        VRUIColorPalette.Instance.UpdateColors();
     }
 
     public void ToggleSettingsMenu()
@@ -63,7 +59,7 @@ public class WatchMenu : MonoBehaviour
         m_SettingsMenuActive = !m_SettingsMenuActive;
         m_SettingsMenu.SetActive(m_SettingsMenuActive);
 
-        m_Palette.UpdateColors();
+        VRUIColorPalette.Instance.UpdateColors();
     }
 
     public void ExitApplication()

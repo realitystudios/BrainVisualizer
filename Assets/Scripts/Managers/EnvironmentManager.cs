@@ -20,6 +20,8 @@ public class EnvironmentManager : MonoBehaviour
     public delegate void SkyboxUpdated(string name);
     public event SkyboxUpdated OnSkyboxUpdated;
 
+    public List<Skybox> Skyboxes { get { return m_Skyboxes; } }
+
     private void Awake()
     {
         if (Instance == null)

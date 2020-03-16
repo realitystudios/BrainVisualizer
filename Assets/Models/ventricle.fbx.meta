@@ -1,60 +1,202 @@
 fileFormatVersion: 2
 guid: dbf0f19b72c178549a84f96778fd4955
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: part 1
-    100002: part 2
-    100004: part 3
-    100006: part 3.1
-    100008: part 4
-    100010: part 5
-    100012: part 6
-    100014: ventricles
-    100016: //RootNode
-    400000: part 1
-    400002: part 2
-    400004: part 3
-    400006: part 3.1
-    400008: part 4
-    400010: part 5
-    400012: part 6
-    400014: ventricles
-    400016: //RootNode
-    2100000: material_43
-    2100002: material_39
-    2100004: material_28
-    2100006: material_16
-    2100008: material_13
-    2100010: material_4
-    2100012: material_0
-    2100014: material_44
-    2300000: part 1
-    2300002: part 2
-    2300004: part 3
-    2300006: part 3.1
-    2300008: part 4
-    2300010: part 5
-    2300012: part 6
-    2300014: ventricles
-    3300000: part 1
-    3300002: part 2
-    3300004: part 3
-    3300006: part 3.1
-    3300008: part 4
-    3300010: part 5
-    3300012: part 6
-    3300014: ventricles
-    4300000: part 3
-    4300002: part 2
-    4300004: part 3.1
-    4300006: part 6
-    4300008: part 4
-    4300010: part 5
-    4300012: part 1
-    4300014: ventricles
-    2186277476908879412: ImportLogs
-  externalObjects: {}
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: part 1
+  - first:
+      1: 100002
+    second: part 2
+  - first:
+      1: 100004
+    second: part 3
+  - first:
+      1: 100006
+    second: part 3.1
+  - first:
+      1: 100008
+    second: part 4
+  - first:
+      1: 100010
+    second: part 5
+  - first:
+      1: 100012
+    second: part 6
+  - first:
+      1: 100014
+    second: ventricles
+  - first:
+      1: 100016
+    second: //RootNode
+  - first:
+      4: 400000
+    second: part 1
+  - first:
+      4: 400002
+    second: part 2
+  - first:
+      4: 400004
+    second: part 3
+  - first:
+      4: 400006
+    second: part 3.1
+  - first:
+      4: 400008
+    second: part 4
+  - first:
+      4: 400010
+    second: part 5
+  - first:
+      4: 400012
+    second: part 6
+  - first:
+      4: 400014
+    second: ventricles
+  - first:
+      4: 400016
+    second: //RootNode
+  - first:
+      21: 2100000
+    second: material_43
+  - first:
+      21: 2100002
+    second: material_39
+  - first:
+      21: 2100004
+    second: material_28
+  - first:
+      21: 2100006
+    second: material_16
+  - first:
+      21: 2100008
+    second: material_13
+  - first:
+      21: 2100010
+    second: material_4
+  - first:
+      21: 2100012
+    second: material_0
+  - first:
+      21: 2100014
+    second: material_44
+  - first:
+      23: 2300000
+    second: part 1
+  - first:
+      23: 2300002
+    second: part 2
+  - first:
+      23: 2300004
+    second: part 3
+  - first:
+      23: 2300006
+    second: part 3.1
+  - first:
+      23: 2300008
+    second: part 4
+  - first:
+      23: 2300010
+    second: part 5
+  - first:
+      23: 2300012
+    second: part 6
+  - first:
+      23: 2300014
+    second: ventricles
+  - first:
+      33: 3300000
+    second: part 1
+  - first:
+      33: 3300002
+    second: part 2
+  - first:
+      33: 3300004
+    second: part 3
+  - first:
+      33: 3300006
+    second: part 3.1
+  - first:
+      33: 3300008
+    second: part 4
+  - first:
+      33: 3300010
+    second: part 5
+  - first:
+      33: 3300012
+    second: part 6
+  - first:
+      33: 3300014
+    second: ventricles
+  - first:
+      43: 4300000
+    second: part 3
+  - first:
+      43: 4300002
+    second: part 2
+  - first:
+      43: 4300004
+    second: part 3.1
+  - first:
+      43: 4300006
+    second: part 6
+  - first:
+      43: 4300008
+    second: part 4
+  - first:
+      43: 4300010
+    second: part 5
+  - first:
+      43: 4300012
+    second: part 1
+  - first:
+      43: 4300014
+    second: ventricles
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_0
+    second: {fileID: 2100000, guid: 2510b9a8f4188e54db1982c64d8ef315, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_13
+    second: {fileID: 2100000, guid: e981606eb831d4f47a5a10785c4305cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_16
+    second: {fileID: 2100000, guid: 4134d6a9f0050884a88137ab95e9e216, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_28
+    second: {fileID: 2100000, guid: 5631d3483d80a304db127bc3eeb7cc68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_39
+    second: {fileID: 2100000, guid: 1b29695eacabca541b0fe57db9b960f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_4
+    second: {fileID: 2100000, guid: 60bab79b2462cb6429499c662a2642f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_43
+    second: {fileID: 2100000, guid: 084f724888f65c341964f1f50f7787e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: material_44
+    second: {fileID: 2100000, guid: c3a67021e1b1254468a836e7b5c75bbc, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -88,6 +230,8 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -95,27 +239,32 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -125,6 +274,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

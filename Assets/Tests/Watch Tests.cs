@@ -22,10 +22,8 @@ namespace Tests
             m_OvrAvatar = new GameObject().AddComponent<OvrAvatar>();
 
             m_Watch = Object.Instantiate(Resources.Load<GameObject>("Prefabs/Watch")).GetComponent<Smartwatch>();
-            m_Watch.GetComponentInChildren<SettingsManager>(true).ColourPalette = m_Palette;
             m_Watch.GetComponentInChildren<SettingsManager>(true).OvrAvatar = m_OvrAvatar;
             m_WatchMenu = m_Watch.GetComponentInChildren<WatchMenu>(true);
-            m_WatchMenu.ColourPalette = m_Palette;
             
             foreach (var canvas in m_WatchMenu.GetComponentsInChildren<Canvas>(true))
             {
