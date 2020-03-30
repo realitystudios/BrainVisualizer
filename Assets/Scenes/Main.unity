@@ -1862,7 +1862,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LeftWristPosition: {fileID: 0}
   m_RightWristPosition: {fileID: 130082438}
-  m_MenuPosition: {fileID: 0}
+  m_MenuPosition: {fileID: 1609694809}
+  m_MenuSize: 0.4
   m_WatchPrefab: {fileID: 4445556919726410565, guid: 333966f634d2ec944b41c05ee6386737,
     type: 3}
   m_MenuPrefab: {fileID: 356397647876734907, guid: bb5c0fd1eac41ca4f8df8deedef86fbb,
@@ -7945,6 +7946,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608557663}
   m_CullTransparentMesh: 0
+--- !u!1 &1609694808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1609694809}
+  m_Layer: 0
+  m_Name: Menu Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1609694809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609694808}
+  m_LocalRotation: {x: -0, y: 0.98450226, z: -0, w: 0.1753721}
+  m_LocalPosition: {x: -0.188, y: 1.43, z: 1.359}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 159.79901, z: 0}
 --- !u!1 &1613409867
 GameObject:
   m_ObjectHideFlags: 0
@@ -11787,11 +11818,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
       propertyPath: oculusUserID
-      value: 0
+      value: 2300216600021350
       objectReference: {fileID: 0}
     - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
       propertyPath: StartWithControllers
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: EnableBody
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
