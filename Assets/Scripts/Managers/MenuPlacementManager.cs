@@ -12,7 +12,10 @@ public class MenuPlacementManager : MonoBehaviour
     [SerializeField]
     private Transform m_MenuPosition;
     [SerializeField]
-    private float m_MenuSize = 0.4f;
+    private float m_MenuSize = 0.2f;
+
+    [Space()]
+    [Header("Prefabs")]
     [SerializeField]
     private GameObject m_WatchPrefab;
     [SerializeField]
