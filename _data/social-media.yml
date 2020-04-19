@@ -1,0 +1,23 @@
+email:
+  id: 'info@realitystudio.xyz'
+  href: 'mailto:'
+  title: 'Email'
+  fa-icon: 'fas fa-envelope-square'
+
+facebook:
+  id: 'realitystudios2'
+  href: 'https://www.facebook.com/'
+  title: 'Facebook'
+  fa-icon: 'fab fa-facebook-square'
+
+twitter:
+  id: 'realitystudios2'
+  href: 'https://www.twitter.com/'
+  title: 'Twitter'
+  fa-icon: 'fab fa-twitter-square'
+
+github:
+  id: 'realitystudios'
+  href: 'https://github.com/'
+  title: 'GitHub'
+  fa-icon: 'fab fa-github-square'

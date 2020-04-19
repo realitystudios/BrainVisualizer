@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }}</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-</head>
-<body>
-    {% include header.html %}
-    <main>
-        {{ content }}
-    </main>
-    {% include footer.html %}
-</body>
+    <head>
+        {% if jekyll.environment == 'production' %}
+        <script src="https://cmp.osano.com/AzyvuPRpvwQ8wak2/0f7c5ca0-ce1e-4b79-ab12-ecd08c2c2485/osano.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158065838-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158065838-1');
+        </script>
+        {% endif %}
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{{ site.title }}</title>
+        
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        {% feed_meta %}
+        {% seo %}
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        {% include header.html %}
+        <main data-spy="scroll" class="container flex-grow-1" data-target="#navbar">
+            {{ content }}
+        </main>
+        {% include footer.html %}
+    </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </html>

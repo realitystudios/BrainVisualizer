@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<img src="/assets/images/logo.png" alt="{{ site.title }}"/>
+
+{% for section in site.sections %}
+<section id="{{ section.navId }}">
+    {{section.content}}
+</section>
+{% endfor %}

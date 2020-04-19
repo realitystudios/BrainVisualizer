@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   A VR application for teaching children about the different parts of the brain
   and their specific functions.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://realitystudios.xyz" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: realitystudios2
 github_username:  realitystudios
 
@@ -33,3 +33,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tags
   - jekyll-sitemap
+
+collections:
+ - sections

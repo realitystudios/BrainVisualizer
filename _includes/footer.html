@@ -1,3 +1,21 @@
-<footer>
-    
+<footer class="fixed-bottom bg-dark">
+    <div class="footer_col">
+        <p class="text-secondary">Reality Studios <br> Copyright 2020, All Rights Reserved</p>
+        <div class="footer_links">
+            <a class="text-secondary" href="\policy.html">Privacy Policy</a>
+        </div>
+        {% if site.data.social-media %}
+        <div class="footer_social">
+            {% assign sm = site.data.social-media %}
+            {% for entry in sm %}
+                {% assign key = entry | first %}
+                {% if sm[key].id %}
+                <a class="text-secondary" href="{{ sm[key].href }}{{ sm[key].id }}">
+                    <i class="{{ sm[key].fa-icon }}"></i>
+                </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
 </footer>
